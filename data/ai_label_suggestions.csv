@@ -1,0 +1,192 @@
+﻿article_no,api_news_id,title,ai_suggestion,confidence,reason
+T01-01,471577410,Missouri man learns his biological father is a rock star,not_relevant,low,หน้าวิดีโอ NBC เรื่องอื่น มีลิงก์ข่าว co-pilot แค่ในแถบข้าง
+T01-02,471577374,"Flydubai pilot attacked captain with cockpit’s crash axe in attempted terrorist attack, UAE official says",relevant,high,นักบินผู้ช่วยใช้ขวานทำร้ายกัปตัน UAE ระบุเป็นก่อการร้าย
+T01-03,471576688,"Pilot Machchhar 'recovering well' after attack on FlyDubai flight, says Indian Embassy",relevant,high,อาการกัปตัน Machchhar หลังถูกทำร้ายบนเที่ยวบิน FZ1073
+T01-04,471576678,"VHP claims 254 Hindus killed in attacks by August this year, seeks action against 'extremist forces'",not_relevant,high,VHP อ้างตัวเลขชาวฮินดูถูกฆ่า ไม่เกี่ยว
+T01-05,471576590,"Parliament Panels Reconstituted: Shashi Tharoor Retained, TMC Loses 2 Key Posts",not_relevant,high,การจัดคณะกรรมาธิการรัฐสภาอินเดีย ไม่เกี่ยว
+T01-06,471576544,FlyDubai co-pilot who ‘nearly crashed jet’ studied at UK university,relevant,high,ประวัติ co-pilot ที่ก่อเหตุ
+T01-07,471575664,UAE: flydubai flight incident a terrorist attack; Indian pilot Smit Machchhar hit with crash axe by co-pilot,relevant,high,UAE ยืนยันเหตุเป็นการก่อการร้าย
+T01-08,471575064,‘Proud He Is Part Of Our Team’: UAE Deputy PM Visits Smit Machchhar,relevant,medium,รองนายกฯ UAE เยี่ยมกัปตันหลังเหตุ เป็นข่าวต่อเนื่องของเหตุการณ์
+T01-09,471573960,JACK CARR: The lesson from FlyDubai is simple. Be ready to save yourself,relevant,medium,บทความความเห็นเรื่องเหตุบนเที่ยวบิน 1073
+T01-10,471571570,World News | Proud He is Part of Our Nation’s Story: UAE Deputy PM Meets Captain Machchhar in Hospital,relevant,medium,รองนายกฯ UAE เยี่ยมกัปตันหลังเหตุ เป็นข่าวต่อเนื่องของเหตุการณ์
+T02-01,471576952,North Korea tests AI-powered strategic missile as Seoul-Pyongyang DMZ tensions escalate,relevant,high,เกาหลีเหนือทดสอบขีปนาวุธ 3 ต.ค.
+T02-02,471567830,North Korea says test of intermediate-range strategic missile included use of AI,relevant,high,เกาหลีเหนือทดสอบขีปนาวุธพิสัยกลาง 3 ต.ค.
+T02-03,471561586,N Korea test fires ballistic missile after Seoul demands apology for landmine blast,relevant,high,เกาหลีเหนือยิงขีปนาวุธหลังโซลเรียกร้องคำขอโทษ
+T02-04,471543260,North Korea fires ballistic missile amid DMZ blast row | Kuwait Times Newspaper,relevant,high,เกาหลีเหนือยิงขีปนาวุธ 3 ต.ค.
+T02-05,471539532,North Korea launches ballistic missile toward East Sea,relevant,high,ยิงขีปนาวุธลงทะเลตะวันออก 3 ต.ค.
+T02-06,471526618,North Korea launches ballistic missile as tensions with Seoul grow over border mine blasts,relevant,high,เกาหลีเหนือยิงขีปนาวุธ 3 ต.ค.
+T02-07,471525724,North Korea fires unidentified projectile into sea,relevant,low,หัวข่าวตรง แต่ข้อความเป็นเมนูเว็บ ต้องเปิด URL ตรวจ
+T02-08,471525552,North Korea fires ballistic missile after Seoul's apology demand,relevant,high,เกาหลีเหนือยิงขีปนาวุธ 3 ต.ค.
+T02-09,471524868,North Korea launches ballistic missile after Seoul demands apology over wounded soldiers,relevant,high,ยิงขีปนาวุธลงทะเลตะวันออกจาก Wonsan
+T02-10,471523024,North Korea fires ballistic missile towards East Sea,relevant,high,ยิงขีปนาวุธลงทะเลตะวันออก 3 ต.ค.
+T03-01,471575230,DRC health minister says worst of Ebola is over,relevant,medium,รมต.สาธารณสุข DRC ว่าการระบาดผ่านจุดสูงสุดแล้ว เป็นสถานการณ์ล่าสุดในคองโก
+T03-02,471570090,Uganda announces it has dropped yellow fever certificate requirement for all travellers in 2026,not_relevant,high,ยูกันดายกเลิกใบรับรองไข้เหลือง ไม่ใช่การระบาดในคองโก
+T03-03,471569110,"DR Congo says Ebola outbreak eases in areas despite death toll topping 4,000",relevant,high,ยอดผู้ป่วย/เสียชีวิตอีโบลาในคองโกล่าสุด
+T03-04,471560756,"Ebola death toll surpasses 4,000 as DR Congo struggles to suppress outbreak",relevant,high,"ยอดเสียชีวิตอีโบลาในคองโกเกิน 4,000"
+T03-05,471557662,Drug trial seeks to halt DR Congo’s deadliest Ebola outbreak,not_relevant,medium,การทดลองยารักษาอีโบลา เข้าข่าย general research ที่ไม่นับ
+T03-06,471551278,"Emerging diseases: GMD tasks private hospitals on preparedness, quality care",not_relevant,high,โรงพยาบาลเอกชนในลากอสเตรียมรับโรคอุบัติใหม่ ไม่เกี่ยว
+T03-07,471547626,"An Ebola treatment center was burned down as the death toll in Congo passes 4,000",relevant,high,"ศูนย์รักษาอีโบลาถูกเผา ยอดเสียชีวิตเกิน 4,000"
+T03-08,471543454,"Deaths From the Ebola Outbreak in Congo Exceed 4,000",relevant,high,"ยอดเสียชีวิตเกิน 4,000 ระบาดหนักใน North Kivu"
+T03-09,471536898,Inside the study for a remedy to fight Congo's deadliest Ebola outbreak,not_relevant,medium,การทดลองยารักษาอีโบลา เข้าข่าย general research ที่ไม่นับ
+T03-10,471529040,"Thousands flee Congo Ebola-hit camp, stoking concerns about disease spread",relevant,medium,ผู้อพยพหนีค่ายใน Ituri กังวลการแพร่ระบาด
+T04-01,471577390,U.S. halts consular services in Brazil ahead of high-stakes election,relevant,medium,US ระงับบริการกงสุลก่อนเลือกตั้งบราซิล
+T04-02,471559390,Brazil’s cliff‑hanger election could rob EU of key ally in Latin America,relevant,high,การเลือกตั้งบราซิลกับผลต่อ EU
+T04-03,471551916,"Flavio Bolsonaro: In the name of the father, sons, and holy ideology",relevant,high,โปรไฟล์ผู้สมัคร Flávio Bolsonaro
+T04-04,471546552,Brazil is regulating AI use in elections. Here’s why it’s been a challenge.,relevant,medium,การกำกับ AI ในการเลือกตั้งบราซิล
+T04-05,471546528,Donald Trump&#039;s &#039;Donroe Doctrine&#039; Faces Biggest Test Yet in Brazil,relevant,high,การเลือกตั้งบราซิลกับนโยบายของ Trump
+T04-06,471543952,Alternative media and Trump are influencing Brazilian voters,relevant,high,สื่อทางเลือกและ Trump กับผู้มีสิทธิ์เลือกตั้งบราซิล
+T04-07,471543950,Brazil votes with Lula and Flávio Bolsonaro tied and a small group of undecided voters holding the key,relevant,high,ผลโพลก่อนเลือกตั้งรอบแรก
+T04-08,471535078,Trump admin shocks with 'unprecedented' move citing unspecified 'security concerns',relevant,medium,US ระงับบริการกงสุลก่อนเลือกตั้ง มองว่าอาจแทรกแซงการเลือกตั้ง
+T04-09,471528734,US and Australia suspend consular services in Brazil ahead of election citing security concerns,relevant,medium,US และออสเตรเลียปิดบริการกงสุลก่อนเลือกตั้ง
+T04-10,471527692,US and Australia suspend diplomatic operations in Brazil before election - Trinidad Tribune – Latest,relevant,medium,US และออสเตรเลียปิดบริการกงสุลก่อนเลือกตั้ง
+T05-01,471518724,"Dutch royal house helped slave trade to survive, study finds - Antigua Tribune – Daily Antigua &amp;",relevant,high,ผลศึกษาราชวงศ์ดัตช์ช่วยค้าทาส
+T05-02,471508562,Dutch study says royal family made huge profits from colonialism,relevant,high,ผลศึกษาราชวงศ์ได้กำไรจากอาณานิคม
+T05-03,471439082,Dutch study says royal family made huge profits from colonialism,relevant,high,ผลศึกษาราชวงศ์ได้กำไรจากอาณานิคม (ต้นฉบับเดียวกับ T05-02)
+T05-04,471433236,King Willem-Alexander Calls Findings on Royal Family’s Colonial Past ‘Painful and Confronting’,relevant,high,กษัตริย์ตอบสนองต่อผลศึกษา
+T05-05,471413986,Dutch royal house earned nearly half a billion from slavery,relevant,high,ราชวงศ์ได้ 576 ล้านยูโรจากการค้าทาส
+T05-06,471375474,Dutch royal house was 'wholeheartedly' involved in colonial exploitation,relevant,high,ผลศึกษาราชวงศ์มีส่วนในการแสวงประโยชน์อาณานิคม
+T05-07,469705270,"Cheap flights, blissful sunshine... and no crowds! I've spent 21 years as a travel writer and these are the 18 places you must visit for some October sun: ROB CROSSAN",not_relevant,high,ข่าวท่องเที่ยว ไม่เกี่ยว
+T05-08,467232096,CANADA-SURREY-9/11 ATTACKS-COMMEMORATION,not_relevant,high,รำลึก 9/11 ในแคนาดา ไม่เกี่ยว
+T05-09,467196024,CANADA-SURREY-9/11 ATTACKS-COMMEMORATION,not_relevant,high,รำลึก 9/11 ในแคนาดา ไม่เกี่ยว
+T05-10,466476412,Recent homes sales in Greater Boston (Sept. 9),not_relevant,high,ขายบ้าน (Colonial คือสไตล์บ้าน) ไม่เกี่ยว
+T06-01,471575832,325 million barrels of oil from strategic reserves released: IEA,relevant,medium,IEA อัปเดตยอดปล่อยสำรอง อ้างถึงข้อตกลง G7 100 ล้านบาร์เรล
+T06-02,471571842,Europe to release ‘massive amount of diesel’ after Trump’s supply threat,relevant,high,G7 ตกลงปล่อยดีเซล 100 ล้านบาร์เรล
+T06-03,471571624,G7 releases oil reserves – could it bring down Denmark’s record-high diesel prices?,relevant,low,หัวข่าวเรื่อง G7 ปล่อยสำรอง แต่ข้อความเป็นข่าวเรือ ต้องเปิด URL ตรวจ
+T06-04,471570634,G7 agrees deal to ease global energy supply concerns,relevant,high,G7 ตกลงปล่อย 100 ล้านบาร์เรล
+T06-05,471569524,Sri Lanka begins jet fuel pipeline and new storage tank projects,not_relevant,high,ท่อน้ำมันเครื่องบินศรีลังกา ไม่เกี่ยว
+T06-06,471569098,Oil prices drop as Europe decides to release diesel reserves,relevant,high,ราคาน้ำมันลดหลังยุโรปปล่อยสำรองดีเซล
+T06-07,471568422,IEA Member Countries Release 325 Million Barrels Of Oil From Strategic Reserves,relevant,medium,IEA อัปเดตยอดปล่อยสำรอง (ต้นฉบับเดียวกับ T06-01)
+T06-08,471567488,What is happening with diesel – and should we be worried?,not_relevant,low,ราคาดีเซลในอังกฤษทำสถิติ อาจเอ่ยถึงการปล่อยสำรองในเนื้อข่าวเต็ม
+T06-09,471546882,Trump claims diesel ban was ‘never really on the table’ after Europe releases reserve barrels,relevant,medium,Trump พูดหลังยุโรปปล่อยสำรอง (ข้อความเป็นเมนูเว็บ ดูจากหัวข่าว)
+T06-10,471545886,Cheapest diesel prices in Birmingham as prices soar to all-time high,not_relevant,high,ปั๊มดีเซลราคาถูกในเบอร์มิงแฮม เป็นข่าวท้องถิ่น
+T07-01,471503614,Oil Prices Hover Near $100 As G7 Unleashes 100 Million Barrels,not_relevant,high,G7 ปล่อยสำรอง (เป็นข่าวของ T06)
+T07-02,471433900,Oil Prices Drop After Trump Pressure Pushes Europe Toward Releasing Diesel Reserves,not_relevant,high,ยุโรปปล่อยสำรองดีเซล (เป็นข่าวของ T06)
+T07-03,471429580,"G7 Nations to Release 100 Million Barrels of Diesel, Crude",not_relevant,high,G7 ปล่อยสำรอง (เป็นข่าวของ T06)
+T07-04,471300544,Oil prices rise as China suspends fuel exports,not_relevant,high,จีนระงับส่งออกน้ำมัน ไม่เกี่ยว
+T07-05,471291650,US tells European allies to release strategic reserves 'immediately' to lower diesel prices,not_relevant,high,US กดดันยุโรปปล่อยสำรอง (เป็นข่าวของ T06)
+T07-06,471237930,"As Texas declares state of emergency over fuel shortage, what’s dyed diesel",relevant,high,เท็กซัสประกาศภาวะฉุกเฉินเรื่องขาดแคลนดีเซล
+T07-07,471210920,Oil prices rise $3 as China suspends fuel exports,not_relevant,high,จีนระงับส่งออกน้ำมัน ไม่เกี่ยว
+T07-08,471125876,Map Shows States Suspending Gas Tax as Indiana Extends Pause,not_relevant,low,แผนที่รัฐที่ระงับภาษีน้ำมัน อาจเอ่ยถึงเท็กซัสในเนื้อข่าวเต็ม
+T07-09,471013582,"Susan Collins, Troy Jackson Must Convince Voters on 5 Issues at 1st Debate",not_relevant,high,ดีเบตวุฒิสภารัฐเมน ไม่เกี่ยว
+T07-10,470890084,Uranium Energy (UEC) Q4 2026 Earnings Call Transcript,not_relevant,high,ผลประกอบการ Uranium Energy ไม่เกี่ยว
+T08-01,471522280,US Coast Guard intercepts ship transporting fuel to Cuba,relevant,high,Coast Guard สกัดเรือขนน้ำมันไปคิวบา
+T08-02,471516782,US Coast Guard says it seized Cuba-bound ships with thousands of gallons of oil,relevant,high,Coast Guard ยึดเรือ 2 ลำที่ขนดีเซลไปคิวบา
+T08-03,471516278,US Coast Guard says it has intercepted ship carrying fuel to Cuba - Cuba,relevant,high,Coast Guard สกัดเรือ Grace ที่ขนน้ำมันไปคิวบา
+T08-04,471504824,US Coast Guard intercepts ship transporting fuel to Cuba,relevant,high,Coast Guard สกัดเรือขนน้ำมันไปคิวบา (ต้นฉบับเดียวกับ T08-01)
+T08-05,471453096,US Coast Guard seizes Cuba-bound ship carrying ‘large quantities’ of fuel,relevant,high,Coast Guard ยึดเรือขนน้ำมันไปคิวบา
+T08-06,471452376,US Coast Guard says it seized Cuba-bound ships with thousands of gallons of oil,relevant,high,ต้นฉบับเดียวกับ T08-02
+T08-07,470705972,"Futures Rise As Oil Drops, Dragging Rates Lower",not_relevant,high,สรุปตลาดหุ้น ไม่เกี่ยว
+T08-08,468922304,China ‘wiretapped Red Sea’ with spy hub 6 miles from US base: ex Pentagon official warns,not_relevant,high,ฐานสอดแนมจีนในทะเลแดง ไม่เกี่ยว
+T08-09,467415280,Voting against the blockade is no longer enough,not_relevant,medium,บทความความเห็นเรื่องการปิดล้อมคิวบา (ก.ย.) ไม่ใช่ข่าวสกัดเรือ
+T09-01,471685880,Wall Street closes week with strong gains despite weak jobs report,relevant,high,"Wall Street ขึ้นหลังรายงานจ้างงาน ก.ย. +29,000 ว่างงาน 4.2%"
+T09-02,471665430,"America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",relevant,high,"สรุปเศรษฐกิจรายสัปดาห์ มีส่วนรายงานจ้างงาน ก.ย. 29,000 / 4.2%"
+T09-03,471663386,"America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",relevant,high,ต้นฉบับเดียวกับ T09-02 คนละเว็บ
+T09-04,471632680,Why a weaker jobs report for September was good news for investors,relevant,high,รายงานจ้างงาน ก.ย. ที่อ่อนแอเป็นข่าวดีต่อนักลงทุน
+T09-05,471619064,"U.S. job growth slows sharply in September, unemployment rises",relevant,high,การจ้างงาน ก.ย. ชะลอตัว ว่างงานขึ้นเป็น 4.2%
+T09-06,471612026,"America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",relevant,high,ต้นฉบับเดียวกับ T09-02 คนละเว็บ
+T09-07,471603254,Wall Street's Midterm Map Just Flipped - Here's What Goldman And JPMorgan See,not_relevant,low,เนื้อหาหลักเป็นแผนที่การเลือกตั้งกลางเทอม เปิดเรื่องด้วยตัวเลขจ้างงาน ก.ย.
+T09-08,471598628,"Unemployment Ticks Up, U.S. Add Disappointing Number Of Jobs In September",relevant,high,"ข่าว AP รายงานจ้างงาน ก.ย. 29,000 ว่างงาน 4.2%"
+T09-09,471594020,"US job growth undershoots expectations in September, but labor market remains stable",relevant,high,การจ้างงาน ก.ย. ต่ำกว่าคาด ว่างงาน 4.2%
+T09-10,471583976,Unemployment rate for post-9/11 vets up as job market slumps,relevant,low,อัตราว่างงานทหารผ่านศึก จากรายงานจ้างงาน ก.ย. ฉบับเดียวกัน
+T10-01,471562766,Elon Musk’s net worth surges by $61bn as SpaceX and Tesla shares rally toward trillion-dollar milestone,not_relevant,low,ความมั่งคั่งของ Musk เพิ่ม เอ่ยถึงหุ้น Tesla ขึ้นหลังยอดส่งมอบดีกว่าคาด
+T10-02,471555904,New Zealand electric car registrations triple as petrol tops $3 a litre,not_relevant,high,ยอดจดทะเบียน EV นิวซีแลนด์ ไม่เกี่ยว
+T10-03,471542994,Honda Super-One has a lot of attitude,not_relevant,high,รีวิวรถ Honda ไม่เกี่ยว
+T10-04,471520518,Rivian’s sales pop as the company’s big R2 bet starts to pay off,not_relevant,high,ยอดส่งมอบ Rivian Q3 ไม่ใช่ Tesla
+T10-05,471513508,"Evening Reading - October 2, 2026",not_relevant,high,รวมข่าวเกม/บันเทิง ไม่เกี่ยว
+T10-06,471492692,Tesla sustains its EV sales momentum despite US troubles,relevant,high,"Tesla ขาย EV Q3 เกิน 480,000 คัน สูงกว่าที่คาด"
+T10-07,471466438,"Stock Market Today, Oct. 2: Tesla Rises on Q3 Delivery Beat",relevant,high,หุ้น Tesla ขึ้นหลังยอดส่งมอบ Q3 ดีกว่าคาด
+T10-08,471464616,"Stock Market Today, Oct. 2: Rivian Beats Q3 Delivery Estimates on Record Production Pace",not_relevant,high,ยอดส่งมอบ Rivian Q3 ไม่ใช่ Tesla
+T10-09,471440198,"Tesla Delivered 486,532 Vehicles in Q3. Here’s Why the Real Test Could Come on Oct. 21.",relevant,high,"Tesla ส่งมอบ 486,532 คันใน Q3 หุ้นขึ้น"
+T10-10,471437032,"Stock Market Midday, Oct. 2: Stocks Rally as Weak Jobs Data Cools Fed Rate Hike Bets",not_relevant,low,สรุปตลาดหุ้นกลางวัน อาจเอ่ยถึง Tesla ในเนื้อข่าวเต็ม
+T11-01,471621916,Anthropic said to target mega-IPO before thanksgiving holiday,relevant,high,Anthropic ตั้งเป้า IPO กลางพฤศจิกายน ก่อน Thanksgiving
+T11-02,471458086,"Anthropic Aims for November IPO, Warns Trump Administration Is a Business Risk",relevant,high,Anthropic ตั้งเป้า IPO พฤศจิกายน และคำเตือนความเสี่ยงใน prospectus
+T11-03,471406256,Anthropic Reportedly Targeting Historic $2 Trillion IPO. The AI Giant Could Hit Public Markets Before Thanksgiving.,relevant,high,Anthropic อาจ IPO 2 ล้านล้าน ก่อน Thanksgiving
+T11-04,471320436,"Anthropic Eyes November IPO, Could Begin Marketing As Early As Nov 9",relevant,high,Anthropic อาจเริ่มทำการตลาด IPO สัปดาห์ 9 พ.ย.
+T11-05,471297010,Musk To Co-Lead US Project On Future Warfare,not_relevant,high,Musk ร่วมนำโครงการสงครามแห่งอนาคต ข่าว IPO อยู่แค่ลิงก์ ALSO READ
+T11-06,471224946,Anthropic said to target mega-IPO before U.S. Thanksgiving holiday,relevant,high,Anthropic ตั้งเป้า IPO ก่อน Thanksgiving (ต้นฉบับเดียวกับ T11-01 คนละเว็บ)
+T12-01,471696522,They’re profiting off your panic: How AI fear became a business model,not_relevant,high,บทความความเห็นเรื่องความกลัว AI ไม่เกี่ยวกับโครงการ 100M
+T12-02,471689224,London and the AI apocalypse: Is the capital becoming dangerously dependent on artificial intelligence?,not_relevant,high,AI ในลอนดอน ไม่เกี่ยว
+T12-03,471649660,"Amazon responds to data center backlash, says it no longer uses NDAs",not_relevant,high,Amazon กับดาต้าเซ็นเตอร์ ไม่เกี่ยว
+T12-04,471621916,Anthropic said to target mega-IPO before thanksgiving holiday,not_relevant,high,Anthropic เตรียม IPO เป็นข่าว Anthropic เรื่องอื่น
+T12-05,471590388,"OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day",not_relevant,high,OpenAI สอบสวนเหตุแฮ็ก (เป็นข่าวของ T13)
+T12-06,471562994,"Is it 'killer robots' or 'super intelligence'? At the UN, leaders see both",not_relevant,high,ผู้นำโลกถกเรื่อง AI ที่ UN ไม่เกี่ยว
+T12-07,471560080,Anthropic’s answer to Dots and Muse is already inside Claude,not_relevant,high,ฟีเจอร์ของ Claude เป็นข่าว Anthropic เรื่องอื่น
+T12-08,471552730,"Stop guessing which AI is best: Get GPT, Claude, and Gemini for under $100",not_relevant,high,โฆษณาแพ็กเกจ AI ราคา 100 ดอลลาร์ ไม่เกี่ยว
+T12-09,471542364,OpenAI reveals new detail on Australia Medicare hack probe,not_relevant,high,OpenAI สอบสวนเหตุแฮ็ก Medicare (เป็นข่าวของ T13)
+T12-10,471491250,"What is Claude Frontier Academy, and why is Anthropic looking to train 10,000 AI engineers?",relevant,high,"Claude Frontier Academy โครงการ 100M ฝึกวิศวกร 10,000 คน"
+T13-01,471641524,We are crusading against things that would keep us safe – like data centres,relevant,medium,บทความความเห็นเรื่องเหตุ AI ของ OpenAI แฮ็กเว็บรัฐบาลออสเตรเลีย
+T13-02,471639592,We are crusading against things that would keep us safe – like data centres,relevant,medium,บทความเดียวกับ T13-01 แจกจ่ายซ้ำคนละเว็บ
+T13-03,471639080,We are crusading against things that would keep us safe – like data centres,relevant,medium,บทความเดียวกับ T13-01 แจกจ่ายซ้ำคนละเว็บ
+T13-04,471634800,OpenAI leader who quit says he can do more for safety from outside the company,not_relevant,low,ผู้บริหารฝ่ายความปลอดภัยของ OpenAI ลาออก ไม่ได้พูดถึงเหตุแฮ็กเป็นหลัก
+T13-05,471632846,Former Anthropic security leader warns AI agents are becoming too autonomous for humans to keep them in check,not_relevant,low,อดีตหัวหน้าความปลอดภัย Anthropic เตือนเรื่อง AI agent เอ่ยถึงเหตุ Hugging Face แต่ไม่ใช่เรื่องเว็บรัฐบาล
+T13-06,471631966,Trump Accord Enshrines Light-Touch Regulation of AI,not_relevant,low,ข้อตกลง AI ของ Trump เอ่ยถึงเหตุ OpenAI แฮ็กเว็บออสเตรเลียแค่ประโยคเดียว
+T13-07,471629120,Alice Cooper on the evolution of his alter ego,not_relevant,high,Alice Cooper ไม่เกี่ยว
+T13-08,471629118,Extended interview: Alice Cooper,not_relevant,high,Alice Cooper ไม่เกี่ยว
+T13-09,471628352,Citizen Sleuths Expose the Rogue AI Big Tech Hid,relevant,medium,AI agent ที่หลุดการควบคุมโจมตีเว็บรัฐบาล US ต่อยอดจากข่าวแฮ็ก
+T13-10,471565312,US court halts AI nude-image ban challenged by Musk,not_relevant,high,ศาลระงับกฎหมายห้ามภาพเปลือยจาก AI ไม่เกี่ยว
+T14-01,471695376,US stocks rose near record levels after latest jobs report eased worries,not_relevant,low,หุ้น US ใกล้สถิติสูงสุด Nvidia เป็นตัวหนุนหลัก แต่ไม่ได้รายงานว่า Nvidia ทำสถิติ
+T14-02,471691808,(SP)MALAYSIA-SEPANG-F1-BAHRAIN GRAND PRIX 2026-QUALIFYING,not_relevant,high,"หน้ารวมหัวข่าว (F1, NFL) ไม่เกี่ยว"
+T14-03,471679270,"KOTIN Gaming PC With RTX 5060 Ti Now $1,300 (Save $100)",not_relevant,high,โปรลดราคาคอมเกมมิ่งการ์ดจอ Nvidia เป็นข่าวสินค้า
+T14-04,471655820,Nvidia on fire again after massive $1 trn wipe out recently - what’s boosting stock of world’s most valuable company,relevant,high,หุ้น Nvidia แตะสถิติสูงสุดระหว่างวัน 237.88 ดอลลาร์
+T14-05,471653044,Nvidia falls short of May record as value nears $6 trn,relevant,high,หุ้น Nvidia แตะสถิติระหว่างวันแต่ปิดต่ำกว่าสถิติเดือนพฤษภาคม
+T14-06,471587152,"Dow Jones Futures: Nasdaq Hits High As Nvidia, SpaceX, Bloom Energy Flash Buy Signals. What To Do Now.",not_relevant,low,Nasdaq ทำสถิติ Nvidia ให้สัญญาณซื้อ (ข้อความถูกตัดสั้น)
+T14-07,471552738,"21 early October Prime Day tech deals, hand-picked by our gadget-obsessed experts",not_relevant,high,ดีลสินค้าไอที Prime Day ไม่เกี่ยว
+T14-08,471544976,Is a Microsoft Stock Split Coming After 23 Years?,not_relevant,high,หุ้น Microsoft แตกพาร์ ไม่เกี่ยว
+T14-09,471525628,"Dow Jones Futures: Nasdaq Hits High As Nvidia, SpaceX, Bloom Energy Flash Buy Signals. What To Do Now.",not_relevant,low,ซ้ำกับ T14-06 (คนละ URL www.); Nasdaq ทำสถิติ Nvidia ให้สัญญาณซื้อ
+T14-10,471525612,"Stock Market Finishes Strong, Yields Off Highs; Micron, Meta, Nvidia, Tesla In Focus: Weekly Review",not_relevant,low,สรุปตลาดรายสัปดาห์ Nasdaq ทำสถิติ Nvidia อยู่ในหัวข่าว (ข้อความถูกตัดสั้น)
+T15-01,471618498,"PH 4-gold haul in Asiad matches 2018, 2022 wins",not_relevant,low,สรุปเหรียญฟิลิปปินส์ มีย่อหน้าเรื่อง Obiena ป้องกันแชมป์
+T15-02,471486960,EJ Obiena trades pole for racket in 'finals match' with Alex Eala | ABS-CBN Sports,not_relevant,high,Obiena ตีเทนนิสกับ Alex Eala ไม่ใช่การแข่งกระโดดค้ำ (ข้อความเป็น footer เว็บ)
+T15-03,471441388,5th gold eludes Philippines in Nagoya Asian Games,not_relevant,low,สรุปเหรียญฟิลิปปินส์ เอ่ยถึงสถิติ 5.91 ม. ของ Obiena
+T15-04,471294662,"Jeus Gabriel Yape notches gold in Asian Games, fourth for PH",not_relevant,high,ทองเทควันโดของ Yape เอ่ยชื่อ Obiena ผ่าน ๆ
+T15-05,471132774,POC chief says surpassing gold medal target still possible,not_relevant,high,ประธาน POC พูดเรื่องเป้าเหรียญทอง ไม่เกี่ยว
+T15-06,471028598,"EJ Obiena rediscovers joy in pole vaulting, feels ‘reborn’ after Asiad gold | ABS-CBN Sports",relevant,medium,Obiena หลังได้ทอง Asiad (ดูจากหัวข่าว ข้อความเป็น footer เว็บ)
+T15-07,470974752,Paalam gets shot at Asian Games gold,not_relevant,high,นักมวย Paalam ไม่เกี่ยว
+T15-08,470974738,Obiena grateful after Asiad defense   ,relevant,high,Obiena ป้องกันแชมป์กระโดดค้ำด้วยสถิติ 5.91 ม.
+T15-09,470945900,Asian Games | Day 10: China sweeps sprint relays as An retains badminton crown,not_relevant,low,สรุปผลวันที่ 10 มีประโยคเรื่อง Obiena ได้ทอง
+T15-10,470888530,WATCH: PISTON continues strike; Manibela calls off protest,not_relevant,high,การประท้วงขนส่งในฟิลิปปินส์ ไม่เกี่ยว
+T16-01,471639018,5 WNBA teams that could pursue Napheesa Collier in free agency,not_relevant,low,เรื่อง Collier อาจย้ายทีม ไม่ได้พูดถึงการโดน Liberty สวีป
+T16-02,471639010,Dream 'locked in' for Game 1 against upset-minded Liberty,not_relevant,low,พรีวิวรอบรอง Dream vs Liberty กล่าวถึงการสวีป Lynx แค่ประโยคเดียว
+T16-03,471626232,"Fever 2026 timeline: How Caitlin Clark, Sophie Cunningham and rivals likely changed the WNBA forever",not_relevant,high,ไทม์ไลน์ทีม Fever ทั้งซีซัน Lynx โผล่แค่เกมฤดูกาลปกติ
+T16-04,471603390,3 Minnesota Lynx who won't be back after catastrophic first-round collapse,relevant,high,ผลกระทบของ Lynx หลังแพ้ No.8 ในรอบแรก
+T16-05,471592950,"How to watch the 2026 WNBA Semifinals: TV channel, live stream info, full schedule",not_relevant,low,ตารางถ่ายทอดรอบรอง มีแค่ลิงก์ข่าวการสวีป
+T16-06,471520786,"WNBA Playoff Bracket 2026 Semifinals Matchups, TV, Live Stream Schedule",not_relevant,low,ตารางรอบรอง กล่าวถึงการชนะ Lynx 1-2 ประโยค
+T16-07,471498022,GA-ASI Demonstrates Disaster Relief Comms System With SoftBank Corp.,not_relevant,high,ข่าวโดรน GA-ASI ไม่เกี่ยว
+T16-08,471494304,GA-ASI Demonstrates Disaster Relief Comms System With SoftBank Corp.,not_relevant,high,ข่าวโดรน GA-ASI ไม่เกี่ยว (ซ้ำกับ T16-07)
+T16-09,471486980,There’s one key element that the Liberty have that the Dream don’t in star-studded semifinal matchup,not_relevant,low,พรีวิวรอบรอง Liberty vs Dream เรื่องประสบการณ์เพลย์ออฟ กล่าวถึงการสวีป Lynx 1-2 ประโยค (เกณฑ์เดียวกับ T16-02)
+T16-10,471464360,Big Brother star forced to exit house immediately as fans fume 'I'm done',not_relevant,high,Lynx เป็นชื่อผู้เข้าแข่งขัน Big Brother
+T17-01,471677324,Worthy: Senators sent a clear message by approving the Protect College Sports Act,relevant,high,คอลัมน์เรื่องวุฒิสภาผ่านร่าง Protect College Sports Act
+T17-02,471667092,Extra:  Ending the NIL “Wild West” | Craig Carton On The Need For College Sports Reform,relevant,high,พูดถึงวุฒิสภาผ่านร่าง 77-22 โดยตรง
+T17-03,471645934,The curious timing of Ted Cruz’s Protect College Sports Act,relevant,high,บทวิเคราะห์ร่างที่วุฒิสภาเพิ่งผ่าน
+T17-04,471628952,Odisha Reviews Anti-Drug Measures; 2.67 Lakh Students Reached Through Awareness Drives,not_relevant,high,ข่าวยาเสพติดในโอริสสา ไม่เกี่ยว
+T17-05,471626232,"Fever 2026 timeline: How Caitlin Clark, Sophie Cunningham and rivals likely changed the WNBA forever",not_relevant,high,ไทม์ไลน์ WNBA ไม่ได้พูดถึงร่างกฎหมาย
+T17-06,471604190,Hafta 609: Is India’s judiciary failing democracy? Could Gen Z revive student politics?,not_relevant,high,พอดแคสต์การเมืองอินเดีย ไม่เกี่ยว
+T17-07,471550448,D.C. Memo: Reining in college sports ‘chaos’,relevant,high,รายงานการผ่านร่าง 77-22 และเนื้อหาร่าง
+T17-08,471540546,Kalshi Is Lobbying States to Fight Off Regulations for Prediction Markets,not_relevant,low,ข่าวล็อบบี้ของ Kalshi กล่าวถึงร่างแค่ในรายชื่อร่างที่ล็อบบี้
+T17-09,471503250,"Extended interview: Ted Cruz on NIL legislation, Paxton-Talarico, Trump's approval rating and more",relevant,medium,สัมภาษณ์ Ted Cruz เรื่องร่างนี้ (ข้อความสั้นมาก เป็นคลิปวิดีโอ)
+T17-10,471447542,College football playoff expansion is nothing more than a desperate financial bailout disguised as progress,not_relevant,low,เรื่องขยาย CFP กล่าวถึง amendment ของร่างแค่ผ่าน ๆ
+T18-01,471672096,Lettuce probe into largest foodborne illness outbreak of parasite in US history: Mexico's Health Ministry investigation finds shocking results,not_relevant,high,ข่าวผักกาดปนเปื้อน ไม่เกี่ยว
+T18-02,471654090,Former Bengals star Joe Mixon teases NFL comeback... just months after 'telling teammates his career is OVER' due to mysterious 'freak' condition,not_relevant,high,ข่าว Joe Mixon Romo อยู่แค่ลิงก์หัวข่าว
+T18-03,471651474,"""Unpredictability and unreliability"": The real reason behind Tony Romo’s CBS exit? Network reportedly wanted freedom from $180M deal before arrest",relevant,high,เบื้องหลังที่ CBS แยกทางกับ Romo
+T18-04,471650328,Larry Nassar controversy takes fresh twist as police dispute claim Team USA gymnastics doctor was removed from Michigan sex offender registry,not_relevant,high,ข่าว Larry Nassar Romo อยู่แค่ลิงก์หัวข่าว
+T18-05,471642648,Kate Upton takes brutal MLB dig after crying during Justin Verlander's final game,not_relevant,high,ข่าว Kate Upton Romo อยู่แค่ลิงก์ข่าวอื่น
+T18-06,471640610,Controversial missed field goal call leaves college football fans split as different angles spark fierce debate,not_relevant,high,ข่าวฟุตบอลมหาลัย Romo อยู่แค่ลิงก์หัวข่าว
+T18-07,471630706,Tony Romo's plans after quitting CBS... as insiders tell of wake-up call that drove NFL legend to step away from network and try something new,relevant,high,แผนของ Romo หลังออกจาก CBS
+T18-08,471630704,Pat McAfee's $1million College GameDay field goal contest turns farcical as Iowa student produces 'worst in history',not_relevant,high,ข่าว College GameDay Romo อยู่แค่ลิงก์หัวข่าว
+T18-09,471625008,Tony Romo and CBS Sports Part Ways After Nine Seasons in the NFL Booth,relevant,high,รายงาน CBS กับ Romo แยกทางโดยตรง
+T18-10,471619046,"CBS Sports, Tony Romo split months after drunk driving arrest",relevant,high,รายงาน CBS กับ Romo แยกทางโดยตรง
+T19-01,471657306,Book Excerpt: Unravelling snow leopard mysteries in ‘The Ghost of the Mountains’ by Kulbhushansingh Suryawanshi - The Tribune,not_relevant,high,หนังสือเรื่องเสือดาวหิมะ ไม่เกี่ยว
+T19-02,471017094,New penguin species named for first time in over 100 years,relevant,high,ข่าวเพนกวินชนิดใหม่ (gentoo)
+T19-03,471000922,Scientists discover new penguin species through breakthrough genetic analysis,relevant,high,ค้นพบ southeastern gentoo ด้วยพันธุกรรม
+T19-04,470882578,"At the bookend of summer, here are September’s best reads",not_relevant,high,Penguin คือสำนักพิมพ์ Penguin Random House
+T19-05,470801490,Scientists identify new species of penguin in subantarctic waters — the first in over a century,relevant,high,southeastern gentoo บนหมู่เกาะ Kerguelen
+T19-06,470517460,"As yellow-eyed penguins disappear, conservationists focus on deaths in fishing nets",not_relevant,low,เรื่องเพนกวินตาเหลืองติดอวน เป็นเพนกวินแต่ไม่ใช่การค้นพบชนิดใหม่
+T19-07,470209744,The People’s Republic: How they rule,not_relevant,high,บทความประวัติการเมืองไนจีเรีย ไม่เกี่ยว
+T19-08,470188760,'Open your eyes': Why China's sixth Antarctic base is raising concerns,not_relevant,high,ฐานวิจัยจีนในแอนตาร์กติกา ไม่เกี่ยว
+T19-09,469704390,"Hoiho, hoiho, it’s off to court they go",not_relevant,high,ทีมบาส Southern Hoiho (ชื่อเพนกวิน) ไม่เกี่ยว
+T19-10,469357466,Ladakh snow leopard safaris named 4th best globally: How the metric works and why it matters for conservati...,not_relevant,high,ซาฟารีเสือดาวหิมะ ไม่เกี่ยว
+T20-01,471489804,New map highlights which US rivers should be priorities for protection,not_relevant,low,แผนที่แม่น้ำ US กล่าวว่า Lake Powell ต่ำเป็นประวัติการณ์แค่ 1 ประโยค
+T20-02,468574454,Satellite Images Show How Lake Powell Has Drained to Record Low in 9 Years,relevant,high,"ภาพดาวเทียม NASA แสดง Lake Powell ลดลงต่ำกว่าสถิติเดิม (3,517 ฟุต)"
+T20-03,468264774,Lake Mead Water Levels Projected to Sharply Drop as Lake Powell Benefits,relevant,low,คาดการณ์ระดับน้ำ Mead/Powell ในอนาคต อ้างถึงระดับต่ำสุดหลายครั้ง แต่เนื้อหาหลักเป็นการพยากรณ์
+T20-04,468151328,Why El Niño Monsoons Won't Provide Cure To Lake Mead Water Crisis,not_relevant,low,เรื่องมรสุมกับ Lake Mead กล่าวว่า Powell ต่ำสุดเป็นประวัติการณ์แค่ 1 ประโยค
+T20-05,467552662,"A Drought, the Colorado River, and the Hoover Dam",not_relevant,low,สารคดีภัยแล้ง Lake Mead/Hoover Dam มีส่วนของ Lake Powell แต่ไม่ได้รายงานสถิติต่ำสุด
+T20-07,466807918,Lake Mead Water Level Update After Hitting Record Low From Drought,not_relevant,medium,อัปเดตระดับน้ำ Lake Mead ไม่ใช่ Lake Powell

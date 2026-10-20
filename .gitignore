@@ -1,0 +1,22 @@
+# Secrets (API keys)
+**/.streamlit/secrets.toml
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated output
+data/results/comparator/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

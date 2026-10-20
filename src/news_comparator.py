@@ -1,0 +1,216 @@
+"""
+news_comparator.py
+News Perspective Comparator (แปลงมาจาก demov1.ipynb)
+Flow: Keyword -> World News API -> Gemini คัดกรองความเกี่ยวข้อง -> Gemini เปรียบเทียบมุมมอง -> HTML
+
+วิธีใช้:
+  python news_comparator.py "Brydon Carse charged over nightclub incident"
+
+ผลลัพธ์: data/results/comparator/<keyword>.html
+"""
+
+import argparse
+import html
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime, timedelta
+from pathlib import Path
+
+import requests
+from google.genai import errors, types
+
+from fetch_dataset import API_URL, clean_text, source_from_url
+from relevance import POS, generate, judge_relevance
+
+OUT_DIR = Path("data/results/comparator")
+COMPARE_CHARS = 800    # ความยาวเนื้อข่าวที่ส่งให้ขั้นเปรียบเทียบมุมมอง (ขั้นคัดกรองใช้ข่าวเต็ม)
+JUDGE_DELAY = 2        # วินาทีระหว่างการเรียก Gemini แต่ละครั้งในขั้นคัดกรอง
+DAYS_BACK = 30         # ค้นข่าวย้อนหลังกี่วัน (free tier ย้อนได้ประมาณ 30 วัน)
+
+
+def clean_keyword(user_input: str) -> str:
+    prompt = f"""Convert this text into a short news search query (maximum 4 words, English only).
+Return ONLY the search query, nothing else.
+
+Text: {user_input}"""
+    return generate(prompt).strip()
+
+
+def fetch_news(keyword: str, max_results: int = 10, days_back: int = DAYS_BACK) -> list[dict]:
+    api_key = os.environ.get("WORLD_NEWS_API_KEY")
+    if not api_key:
+        raise RuntimeError("WORLD_NEWS_API_KEY not found in secrets.toml or environment")
+
+    params = {
+        "text": keyword,
+        "language": "en",
+        "number": max_results,
+        "earliest-publish-date": (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d"),
+    }
+    res = requests.get(API_URL, params=params, headers={"x-api-key": api_key}, timeout=30)
+    if res.status_code != 200:
+        raise RuntimeError(f"World News API error {res.status_code}: {res.text[:200]}")
+
+    articles = []
+    seen_sources = set()
+    for item in res.json().get("news", []):
+        url = item.get("url", "")
+        source = source_from_url(url)
+        # เก็บสำนักละ 1 ข่าว (เดิมใช้ source_country ทำให้เหลือประเทศละข่าวเดียว)
+        if source in seen_sources:
+            continue
+        seen_sources.add(source)
+        articles.append({
+            "source": source,
+            "country": item.get("source_country", ""),
+            "title": html.unescape(item.get("title", "")),
+            "text": clean_text(item.get("text") or ""),
+            "url": url,
+        })
+    print(f"ดึงข่าวได้ {len(articles)} สำนัก")
+    return articles
+
+
+def filter_relevant(topic: str, articles: list[dict], on_progress=None) -> list[dict]:
+    """ให้ Gemini ตัดสินทีละข่าวว่าเกี่ยวข้องกับหัวข้อไหม (ใช้ judge_relevance ตัวเดียวกับที่วัดผลใน evaluate.py)
+    on_progress(i, total, article, label, reason) ถูกเรียกหลังตัดสินแต่ละข่าว (ใช้แสดง progress บนเว็บ)"""
+    kept = []
+    for i, a in enumerate(articles):
+        if i:
+            time.sleep(JUDGE_DELAY)
+        label, reason = judge_relevance(topic, a["title"], a["text"])
+        mark = "✓" if label == POS else "✗"
+        print(f"  {mark} [{a['source']}] {a['title'][:70]}  ({reason})")
+        if on_progress:
+            on_progress(i + 1, len(articles), a, label, reason)
+        if label == POS:
+            kept.append(a)
+    print(f"เกี่ยวข้อง {len(kept)} จาก {len(articles)} ข่าว")
+    return kept
+
+
+COMPARE_CONFIG = types.GenerateContentConfig(
+    response_mime_type="application/json",
+    response_schema={
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "article": {"type": "integer"},
+                "summary": {"type": "string"},
+                "angle": {"type": "string"},
+                "sentiment": {"type": "string", "enum": ["positive", "neutral", "negative"]},
+                "unique_point": {"type": "string"},
+            },
+            "required": ["article", "summary", "angle", "sentiment", "unique_point"],
+        },
+    },
+)
+
+
+def compare_perspectives(keyword: str, articles: list[dict]) -> list[dict]:
+    """ให้ Gemini เปรียบเทียบมุมมองของแต่ละสำนัก คืน list ที่มีข้อมูลบทความต้นฉบับแนบมาด้วย"""
+    if not articles:
+        return []
+
+    articles_text = ""
+    for i, a in enumerate(articles, 1):
+        articles_text += f"""
+--- Article {i} ---
+Source: {a['source']}
+Title: {a['title']}
+Content: {a['text'][:COMPARE_CHARS]}
+"""
+
+    prompt = f"""You are analyzing news articles about the same topic from different sources.
+Topic: "{keyword}"
+{articles_text}
+For each article, return an object with:
+- "article": the article number
+- "summary": 2-sentence summary in English
+- "angle": what angle or framing this source emphasizes (1 sentence)
+- "sentiment": "positive", "neutral", or "negative"
+- "unique_point": one thing this source mentions that others don't"""
+
+    results = json.loads(generate(prompt, COMPARE_CONFIG))
+    merged = []
+    for r in results:
+        n = r.get("article")
+        if isinstance(n, int) and 1 <= n <= len(articles):
+            merged.append({**articles[n - 1], **r})
+    return merged
+
+
+SENTIMENT_COLORS = {"positive": "#d4edda", "negative": "#f8d7da", "neutral": "#fff3cd"}
+
+
+def save_html(results: list[dict], keyword: str) -> Path:
+    e = html.escape
+    parts = [f"<meta charset='utf-8'><h2>Topic: {e(keyword)}</h2>",
+             f"<p>Found perspectives from {len(results)} sources</p>"]
+    for r in results:
+        color = SENTIMENT_COLORS.get(r.get("sentiment", ""), "#f0f0f0")
+        parts.append(f"""
+        <div style="border:1px solid #ddd; border-radius:8px; padding:16px; margin:12px 0; background:{color}; color:#000;">
+          <h3 style="margin:0 0 4px;">{e(r['source'])} ({e(r['country'])})</h3>
+          <p style="margin:0 0 8px"><a href="{e(r['url'])}" target="_blank" style="color:#000;">{e(r['title'])}</a></p>
+          <p><b>Summary:</b> {e(r.get('summary', ''))}</p>
+          <p><b>Angle:</b> {e(r.get('angle', ''))}</p>
+          <p><b>Unique point:</b> {e(r.get('unique_point', ''))}</p>
+          <span style="background:#fff; border-radius:4px; padding:2px 8px; font-size:12px">Sentiment: {e(r.get('sentiment', '?'))}</span>
+        </div>""")
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    slug = re.sub(r"[^a-z0-9]+", "_", keyword.lower()).strip("_") or "result"
+    out_path = OUT_DIR / f"{slug}.html"
+    out_path.write_text("\n".join(parts), encoding="utf-8")
+    return out_path
+
+
+def run_pipeline(input_text: str, max_results: int = 10, days_back: int = DAYS_BACK) -> None:
+    print("Step 1: หา keyword...")
+    keyword = clean_keyword(input_text)
+    print(f"keyword: {keyword}")
+    # ข้อความที่ผู้ใช้พิมพ์มาบอกหัวข้อได้ละเอียดกว่า keyword สั้นๆ จึงใช้เป็นเกณฑ์คัดกรอง
+    topic = input_text
+
+    print("\nStep 2: ดึงข่าว...")
+    articles = fetch_news(keyword, max_results, days_back)
+    if not articles:
+        print("ไม่พบข่าว ลองเปลี่ยน keyword")
+        return
+
+    print("\nStep 3: คัดกรองข่าวที่เกี่ยวข้อง...")
+    articles = filter_relevant(topic, articles)
+    if not articles:
+        print("ไม่มีข่าวที่เกี่ยวข้อง ลองเปลี่ยน keyword")
+        return
+
+    print("\nStep 4: เปรียบเทียบมุมมอง...")
+    results = compare_perspectives(keyword, articles)
+    for r in results:
+        print(f"  [{r['source']}] {r['sentiment']}: {r['angle']}")
+
+    out_path = save_html(results, keyword)
+    print(f"\nบันทึกผลที่ {out_path}")
+
+
+def main() -> None:
+    # fetch_news ใช้ RuntimeError แล้ว (เพื่อให้เว็บจับได้) CLI จึงแปลงกลับเป็นข้อความ + exit
+    ap = argparse.ArgumentParser(description="News Perspective Comparator")
+    ap.add_argument("text", help="keyword หรือข้อความอธิบายหัวข้อข่าว")
+    ap.add_argument("--max", type=int, default=10, help="จำนวนข่าวสูงสุดที่ดึง (default 10)")
+    ap.add_argument("--days", type=int, default=DAYS_BACK, help=f"ย้อนหลังกี่วัน (default {DAYS_BACK})")
+    args = ap.parse_args()
+
+    try:
+        run_pipeline(args.text, max_results=args.max, days_back=args.days)
+    except RuntimeError as err:
+        sys.exit(str(err))
+
+
+if __name__ == "__main__":
+    main()

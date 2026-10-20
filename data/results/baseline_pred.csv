@@ -1,0 +1,47 @@
+﻿topic_id,difficulty,article_no,source,title,final_label,baseline_pred,outcome,baseline_reason
+T16,hard,T16-01,yardbarker.com,5 WNBA teams that could pursue Napheesa Collier in free agency,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-02,yardbarker.com,Dream 'locked in' for Game 1 against upset-minded Liberty,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-03,foxnews.com,"Fever 2026 timeline: How Caitlin Clark, Sophie Cunningham and rivals likely changed the WNBA forever",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-04,fansided.com,3 Minnesota Lynx who won't be back after catastrophic first-round collapse,relevant,relevant,TP,มี keyword ครบทุกคำ: ['lynx']
+T16,hard,T16-05,nbcsports.com,"How to watch the 2026 WNBA Semifinals: TV channel, live stream info, full schedule",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-06,bleacherreport.com,"WNBA Playoff Bracket 2026 Semifinals Matchups, TV, Live Stream Schedule",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-07,argentinastar.com,GA-ASI Demonstrates Disaster Relief Comms System With SoftBank Corp.,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-08,barbadosnews.net,GA-ASI Demonstrates Disaster Relief Comms System With SoftBank Corp.,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T16,hard,T16-09,nypost.com,There’s one key element that the Liberty have that the Dream don’t in star-studded semifinal matchup,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T16,hard,T16-10,mirror.co.uk,Big Brother star forced to exit house immediately as fans fume 'I'm done',not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T17,easy,T17-01,stltoday.com,Worthy: Senators sent a clear message by approving the Protect College Sports Act,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['protect', 'college', 'sports', 'act']"
+T17,easy,T17-02,radio.foxnews.com,Extra:  Ending the NIL “Wild West” | Craig Carton On The Need For College Sports Reform,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['college', 'sports']"
+T17,easy,T17-03,ms.now,The curious timing of Ted Cruz’s Protect College Sports Act,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['protect', 'college', 'sports', 'act']"
+T17,easy,T17-04,pragativadi.com,Odisha Reviews Anti-Drug Measures; 2.67 Lakh Students Reached Through Awareness Drives,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T17,easy,T17-05,foxnews.com,"Fever 2026 timeline: How Caitlin Clark, Sophie Cunningham and rivals likely changed the WNBA forever",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T17,easy,T17-06,newslaundry.com,Hafta 609: Is India’s judiciary failing democracy? Could Gen Z revive student politics?,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T17,easy,T17-07,minnpost.com,D.C. Memo: Reining in college sports ‘chaos’,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['college', 'sports']"
+T17,easy,T17-08,truthout.org,Kalshi Is Lobbying States to Fight Off Regulations for Prediction Markets,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T17,easy,T17-09,cbsnews.com,"Extended interview: Ted Cruz on NIL legislation, Paxton-Talarico, Trump's approval rating and more",relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T17,easy,T17-10,foxnews.com,College football playoff expansion is nothing more than a desperate financial bailout disguised as progress,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['college']
+T18,easy,T18-01,economictimes.indiatimes.com,Lettuce probe into largest foodborne illness outbreak of parasite in US history: Mexico's Health Ministry investigation finds shocking results,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-02,dailymail.com,Former Bengals star Joe Mixon teases NFL comeback... just months after 'telling teammates his career is OVER' due to mysterious 'freak' condition,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-03,timesofindia.indiatimes.com,"""Unpredictability and unreliability"": The real reason behind Tony Romo’s CBS exit? Network reportedly wanted freedom from $180M deal before arrest",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['tony', 'romo', 'cbs']"
+T18,easy,T18-04,dailymail.com,Larry Nassar controversy takes fresh twist as police dispute claim Team USA gymnastics doctor was removed from Michigan sex offender registry,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-05,aol.com,Kate Upton takes brutal MLB dig after crying during Justin Verlander's final game,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-06,dailymail.com,Controversial missed field goal call leaves college football fans split as different angles spark fierce debate,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-07,dailymail.com,Tony Romo's plans after quitting CBS... as insiders tell of wake-up call that drove NFL legend to step away from network and try something new,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['tony', 'romo', 'cbs']"
+T18,easy,T18-08,dailymail.com,Pat McAfee's $1million College GameDay field goal contest turns farcical as Iowa student produces 'worst in history',not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T18,easy,T18-09,finchannel.com,Tony Romo and CBS Sports Part Ways After Nine Seasons in the NFL Booth,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['tony', 'romo', 'cbs']"
+T18,easy,T18-10,staradvertiser.com,"CBS Sports, Tony Romo split months after drunk driving arrest",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['tony', 'romo', 'cbs']"
+T19,medium,T19-01,tribuneindia.com,Book Excerpt: Unravelling snow leopard mysteries in ‘The Ghost of the Mountains’ by Kulbhushansingh Suryawanshi - The Tribune,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T19,medium,T19-02,bbc.co.uk,New penguin species named for first time in over 100 years,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['penguin', 'species']"
+T19,medium,T19-03,foxweather.com,Scientists discover new penguin species through breakthrough genetic analysis,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['penguin', 'species']"
+T19,medium,T19-04,csmonitor.com,"At the bookend of summer, here are September’s best reads",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T19,medium,T19-05,nypost.com,Scientists identify new species of penguin in subantarctic waters — the first in over a century,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['penguin', 'species']"
+T19,medium,T19-06,news.mongabay.com,"As yellow-eyed penguins disappear, conservationists focus on deaths in fishing nets",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T19,medium,T19-07,tribuneonlineng.com,The People’s Republic: How they rule,not relevant,not relevant,TN,"ไม่พบคำ: ['penguin', 'species']"
+T19,medium,T19-08,abc.net.au,Open your eyes': Why China's sixth Antarctic base is raising concerns,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T19,medium,T19-09,newsroom.co.nz,"Hoiho, hoiho, it’s off to court they go",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T19,medium,T19-10,firstpost.com,Ladakh snow leopard safaris named 4th best globally: How the metric works and why it matters for conservati...,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T20,easy,T20-01,independent.co.uk,New map highlights which US rivers should be priorities for protection,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T20,easy,T20-02,newsweek.com,Satellite Images Show How Lake Powell Has Drained to Record Low in 9 Years,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['lake', 'powell']"
+T20,easy,T20-03,newsweek.com,Lake Mead Water Levels Projected to Sharply Drop as Lake Powell Benefits,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['lake', 'powell', 'water']"
+T20,easy,T20-04,newsweek.com,Why El Niño Monsoons Won't Provide Cure To Lake Mead Water Crisis,not relevant,relevant,FP,"มี keyword ครบทุกคำ: ['lake', 'water']"
+T20,easy,T20-05,theepochtimes.com,"A Drought, the Colorado River, and the Hoover Dam",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T20,easy,T20-07,newsweek.com,Lake Mead Water Level Update After Hitting Record Low From Drought,not relevant,relevant,FP,"มี keyword ครบทุกคำ: ['lake', 'water', 'level']"

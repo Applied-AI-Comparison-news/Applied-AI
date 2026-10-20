@@ -1,0 +1,19 @@
+﻿group,system,TP,FP,FN,TN,n,precision,recall,f1
+ALL,baseline,14,3,2,27,46,0.8235294117647058,0.875,0.8484848484848485
+ALL,gemini,14,2,2,28,46,0.875,0.875,0.875
+topic T16,baseline,1,0,1,8,10,1.0,0.5,0.6666666666666666
+topic T16,gemini,0,1,2,7,10,0.0,0.0,0.0
+topic T17,baseline,4,1,1,4,10,0.8,0.8,0.8000000000000002
+topic T17,gemini,5,0,0,5,10,1.0,1.0,1.0
+topic T18,baseline,4,0,0,6,10,1.0,1.0,1.0
+topic T18,gemini,4,0,0,6,10,1.0,1.0,1.0
+topic T19,baseline,3,0,0,7,10,1.0,1.0,1.0
+topic T19,gemini,3,0,0,7,10,1.0,1.0,1.0
+topic T20,baseline,2,2,0,2,6,0.5,1.0,0.6666666666666666
+topic T20,gemini,2,1,0,3,6,0.6666666666666666,1.0,0.8
+difficulty easy,baseline,10,3,1,12,26,0.7692307692307693,0.9090909090909091,0.8333333333333333
+difficulty easy,gemini,11,1,0,14,26,0.9166666666666666,1.0,0.9565217391304348
+difficulty medium,baseline,3,0,0,7,10,1.0,1.0,1.0
+difficulty medium,gemini,3,0,0,7,10,1.0,1.0,1.0
+difficulty hard,baseline,1,0,1,8,10,1.0,0.5,0.6666666666666666
+difficulty hard,gemini,0,1,2,7,10,0.0,0.0,0.0
