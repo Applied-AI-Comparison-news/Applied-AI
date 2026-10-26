@@ -15,7 +15,7 @@ from fetch_dataset import API_URL, clean_text, source_from_url
 from relevance import POS, generate, judge_relevance
 
 OUT_DIR = Path("data/results/comparator")
-COMPARE_CHARS = 800
+COMPARE_CHARS = 3000
 JUDGE_CHARS = 3000
 JUDGE_DELAY = 2
 DAYS_BACK = 30
