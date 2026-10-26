@@ -26,13 +26,18 @@ from fetch_dataset import API_URL, clean_text, source_from_url
 from relevance import POS, generate, judge_relevance
 
 OUT_DIR = Path("data/results/comparator")
-COMPARE_CHARS = 800    # ความยาวเนื้อข่าวที่ส่งให้ขั้นเปรียบเทียบมุมมอง (ขั้นคัดกรองใช้ข่าวเต็ม)
+COMPARE_CHARS = 800    # ความยาวเนื้อข่าวที่ส่งให้ขั้นเปรียบเทียบมุมมอง
+JUDGE_CHARS = 3000     # ความยาวเนื้อข่าวที่ส่งให้ขั้นคัดกรอง (ตัดให้ Gemini ตอบเร็วขึ้น evaluate.py ยังใช้ข่าวเต็ม)
 JUDGE_DELAY = 2        # วินาทีระหว่างการเรียก Gemini แต่ละครั้งในขั้นคัดกรอง
 DAYS_BACK = 30         # ค้นข่าวย้อนหลังกี่วัน (free tier ย้อนได้ประมาณ 30 วัน)
 
 
 def clean_keyword(user_input: str) -> str:
-    prompt = f"""Convert this text into a short news search query (maximum 4 words, English only).
+    prompt = f"""Convert this text into a short news search query (maximum 5 words, English only).
+- Copy words exactly as written in the text. Never merge or split words
+  (keep "rock star" as two words, never "rockstar"; keep "co-pilot" as is).
+- Keep the words that make this story specific (names, places, the unusual detail, e.g. "biological"),
+  and drop only filler words such as "man", "learns", "is", "over".
 Return ONLY the search query, nothing else.
 
 Text: {user_input}"""
@@ -54,24 +59,49 @@ def fetch_news(keyword: str, max_results: int = 10, days_back: int = DAYS_BACK) 
     if res.status_code != 200:
         raise RuntimeError(f"World News API error {res.status_code}: {res.text[:200]}")
 
-    articles = []
-    seen_sources = set()
+    query_words = set(re.findall(r"[a-z0-9]+", keyword.lower()))
+    best: dict[str, tuple[int, dict]] = {}
     for item in res.json().get("news", []):
         url = item.get("url", "")
         source = source_from_url(url)
-        # เก็บสำนักละ 1 ข่าว (เดิมใช้ source_country ทำให้เหลือประเทศละข่าวเดียว)
-        if source in seen_sources:
-            continue
-        seen_sources.add(source)
-        articles.append({
+        article = {
             "source": source,
             "country": item.get("source_country", ""),
             "title": html.unescape(item.get("title", "")),
             "text": clean_text(item.get("text") or ""),
             "url": url,
-        })
+        }
+        # เก็บสำนักละ 1 ข่าว (เดิมใช้ source_country ทำให้เหลือประเทศละข่าวเดียว)
+        # เลือกข่าวที่มีคำค้นใน title มากสุด ไม่ใช่ตัวแรก เพราะ API เรียงตามวันที่ หน้าที่ไม่เกี่ยวมักมาก่อน
+        score = len(query_words & set(re.findall(r"[a-z0-9]+", article["title"].lower())))
+        if source not in best or score > best[source][0]:
+            best[source] = (score, article)
+    articles = [a for _, a in best.values()]
     print(f"ดึงข่าวได้ {len(articles)} สำนัก")
     return articles
+
+
+def search_variants(keyword: str, user_input: str) -> list[str]:
+    """query ที่จะลองตามลำดับ: keyword เดิม -> ตัดคำท้ายทีละคำ (เหลืออย่างน้อย 2 คำ) -> ข้อความที่ผู้ใช้พิมพ์"""
+    words = keyword.split()
+    variants = [keyword]
+    while len(words) > 2:
+        words = words[:-1]
+        variants.append(" ".join(words))
+    variants.append(user_input.strip())
+    seen = set()
+    return [v for v in variants if v and not (v.lower() in seen or seen.add(v.lower()))]
+
+
+def find_articles(keyword: str, user_input: str, max_results: int = 10, days_back: int = DAYS_BACK) -> tuple[list[dict], str]:
+    """ค้นข่าวด้วย keyword ถ้าไม่เจอเลยลอง query ที่หลวมขึ้นตาม search_variants คืน (ข่าว, query ที่ใช้ได้ผล)
+    World News API ต้องเจอทุกคำใน query ถ้า keyword ที่ได้มีคำที่ข่าวไม่ใช้ จะได้ 0 ข่าว"""
+    for query in search_variants(keyword, user_input):
+        articles = fetch_news(query, max_results, days_back)
+        if articles:
+            return articles, query
+        print(f"  ไม่พบข่าวด้วย '{query}' ลอง query ถัดไป...")
+    return [], keyword
 
 
 def filter_relevant(topic: str, articles: list[dict], on_progress=None) -> list[dict]:
@@ -81,7 +111,7 @@ def filter_relevant(topic: str, articles: list[dict], on_progress=None) -> list[
     for i, a in enumerate(articles):
         if i:
             time.sleep(JUDGE_DELAY)
-        label, reason = judge_relevance(topic, a["title"], a["text"])
+        label, reason = judge_relevance(topic, a["title"], a["text"][:JUDGE_CHARS])
         mark = "✓" if label == POS else "✗"
         print(f"  {mark} [{a['source']}] {a['title'][:70]}  ({reason})")
         if on_progress:
@@ -178,7 +208,7 @@ def run_pipeline(input_text: str, max_results: int = 10, days_back: int = DAYS_B
     topic = input_text
 
     print("\nStep 2: ดึงข่าว...")
-    articles = fetch_news(keyword, max_results, days_back)
+    articles, keyword = find_articles(keyword, input_text, max_results, days_back)
     if not articles:
         print("ไม่พบข่าว ลองเปลี่ยน keyword")
         return

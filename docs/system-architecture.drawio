@@ -1,0 +1,183 @@
+<mxfile host="65bd71144e">
+    <diagram name="System Architecture" id="npc-arch-lr">
+        <mxGraphModel dx="798" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="cl_t" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=16;fontColor=#8DB4E2;fontStyle=1;fontFamily=Arial;" value="CLIENT" vertex="1">
+                    <mxGeometry height="30" width="190" x="70" y="102.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="cl" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 6;strokeWidth=2;strokeColor=#1F2A5C;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="400" width="150" x="90" y="142.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="cl_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/chrome.png&quot; width=&quot;60&quot;&gt;" vertex="1">
+                    <mxGeometry height="70" width="70" x="130" y="272.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="cl_l" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#000000;fontStyle=1;fontFamily=Arial;" value="WEB BROWSER" vertex="1">
+                    <mxGeometry height="40" width="170" x="80" y="352.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="us_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png&quot; width=&quot;60&quot;&gt;" vertex="1">
+                    <mxGeometry height="70" width="70" x="130" y="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="us_l" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=13;fontColor=#000000;fontStyle=1;fontFamily=Arial;" value="USER" vertex="1">
+                    <mxGeometry height="25" width="100" x="115" y="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_us" edge="1" parent="1" source="us_img" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;fontStyle=1;fontColor=#8DB4E2;labelBackgroundColor=#FFFFFF;fontFamily=Arial;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="cl" value="พิมพ์หัวข้อข่าว">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="be_t" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=16;fontColor=#8DB4E2;fontStyle=1;fontFamily=Arial;" value="STREAMLIT APP (PYTHON)" vertex="1">
+                    <mxGeometry height="30" width="760" x="340" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="be" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 6;strokeWidth=2;strokeColor=#1F2A5C;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="640" width="760" x="340" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="be_f" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=12;fontColor=#F4A261;fontStyle=0;fontFamily=Arial;" value="LOCAL MACHINE · streamlit run app.py" vertex="1">
+                    <mxGeometry height="30" width="450" x="620" y="725" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw_t" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=13;fontColor=#000000;fontStyle=1;fontFamily=Arial;" value="WEB UI · app.py" vertex="1">
+                    <mxGeometry height="45" width="190" x="380" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 6;strokeWidth=1.5;strokeColor=#1F2A5C;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="430" width="190" x="380" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://streamlit.io/images/brand/streamlit-mark-color.png&quot; width=&quot;60&quot;&gt;" vertex="1">
+                    <mxGeometry height="50" width="70" x="440" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw_n" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=15;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="STREAMLIT" vertex="1">
+                    <mxGeometry height="25" width="170" x="390" y="228" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_in" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="INPUT" vertex="1">
+                    <mxGeometry height="50" width="150" x="400" y="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_cache" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2B8A3E;fontSize=11;fontFamily=Arial;dashed=1;" value="CACHE&lt;br&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;st.cache_data (TTL 1 ชม.)&lt;br&gt;&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="150" x="400" y="335" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_res" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="RESULT CARDS&lt;br&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;แยกตามสำนักข่าว&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="50" width="150" x="400" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_xl" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="EXPORT EXCEL&lt;br&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;(openpyxl)&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="50" width="150" x="400" y="475" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cl_gw" edge="1" parent="1" source="cl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.29;entryDx=0;entryDy=0;" target="gw" value="HTTP /&lt;br&gt;WEBSOCKET">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_xl" edge="1" parent="1" source="ui_xl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;fontStyle=1;fontColor=#8DB4E2;labelBackgroundColor=#FFFFFF;fontFamily=Arial;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.894;entryDx=0;entryDy=0;" target="cl" value="ดาวน์โหลด .xlsx">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pl" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 6;strokeWidth=2;strokeColor=#FF9933;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="550" width="450" x="620" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="pl_t" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=14;fontColor=#000000;fontStyle=1;fontFamily=Arial;" value="ANALYSIS PIPELINE" vertex="1">
+                    <mxGeometry height="40" width="450" x="620" y="162" as="geometry"/>
+                </mxCell>
+                <mxCell id="dk" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#8FA8F5;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="420" width="390" x="650" y="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="75" width="350" x="670" y="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-gemini.png&quot; width=&quot;40&quot;&gt;" vertex="1">
+                    <mxGeometry height="50" width="50" x="680" y="237" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_n" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="STEP 1 · KEYWORD EXTRACTION" vertex="1">
+                    <mxGeometry height="22" width="260" x="745" y="232" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_d" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="แปลงหัวข้อเป็นคำค้นสั้นๆ ไม่เกิน 5 คำ" vertex="1">
+                    <mxGeometry height="36" width="260" x="745" y="256" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="75" width="350" x="670" y="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/python.png&quot; width=&quot;40&quot;&gt;" vertex="1">
+                    <mxGeometry height="50" width="50" x="680" y="332" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_n" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="STEP 2 · NEWS SEARCH" vertex="1">
+                    <mxGeometry height="22" width="260" x="745" y="327" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_d" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="ค้นข่าวย้อนหลัง 30 วัน เก็บสำนักละ 1 ข่าว หากไม่เจอจะลดคำค้นแล้วลองใหม่" vertex="1">
+                    <mxGeometry height="36" width="265" x="745" y="351" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="75" width="350" x="670" y="415" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-gemini.png&quot; width=&quot;40&quot;&gt;" vertex="1">
+                    <mxGeometry height="50" width="50" x="680" y="427" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_n" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="STEP 3 · RELEVANCE FILTER" vertex="1">
+                    <mxGeometry height="22" width="260" x="745" y="422" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_d" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="ตัดสินทีละข่าวว่าเกี่ยวข้องกับหัวข้อไหม" vertex="1">
+                    <mxGeometry height="36" width="260" x="745" y="446" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="75" width="350" x="670" y="510" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-gemini.png&quot; width=&quot;40&quot;&gt;" vertex="1">
+                    <mxGeometry height="50" width="50" x="680" y="522" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_n" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="STEP 4 · PERSPECTIVE COMPARISON" vertex="1">
+                    <mxGeometry height="22" width="265" x="745" y="517" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_d" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="สรุป มุมมอง sentiment และจุดที่ต่างจากสำนักอื่น" vertex="1">
+                    <mxGeometry height="36" width="265" x="745" y="541" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_12" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="s2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_23" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="s3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_34" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="s4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cfg" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=10;fontFamily=Arial;dashed=1;" value="&lt;b&gt;CONFIG&lt;/b&gt; · .streamlit/secrets.toml&lt;br&gt;GEMINI_API_KEY · WORLD_NEWS_API_KEY · MODEL" vertex="1">
+                    <mxGeometry height="45" width="390" x="650" y="642" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_in" edge="1" parent="1" source="ui_in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="s1" value="หัวข้อข่าว">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_out" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ui_res" value="ผลวิเคราะห์">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="547.5"/>
+                            <mxPoint x="600" y="435"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ex_t" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=16;fontColor=#8DB4E2;fontStyle=1;fontFamily=Arial;" value="EXTERNAL APIs" vertex="1">
+                    <mxGeometry height="30" width="260" x="1150" y="102.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="ex" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 6;strokeWidth=2;strokeColor=#1F2A5C;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="480" width="260" x="1150" y="142.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="wn" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="150" width="220" x="1170" y="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="wn_n" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="WORLD NEWS API" vertex="1">
+                    <mxGeometry height="22" width="200" x="1180" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="wn_d" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="api.worldnewsapi.com/search-news" vertex="1">
+                    <mxGeometry height="60" width="200" x="1180" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="gm" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5C;fontSize=11;fontFamily=Arial;" value="" vertex="1">
+                    <mxGeometry height="240" width="220" x="1170" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="gm_img" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;img src=&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-gemini.png&quot; width=&quot;55&quot;&gt;" vertex="1">
+                    <mxGeometry height="65" width="70" x="1245" y="375" as="geometry"/>
+                </mxCell>
+                <mxCell id="gm_n" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=12;fontColor=#3B5BDB;fontStyle=5;fontFamily=Arial;" value="GOOGLE GEMINI API" vertex="1">
+                    <mxGeometry height="22" width="200" x="1180" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="gm_d" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=10;fontColor=#333333;fontStyle=0;fontFamily=Arial;" value="gemini-3.1-flash-lite" vertex="1">
+                    <mxGeometry height="80" width="200" x="1180" y="476" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_wn" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;fontFamily=Arial;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="wn" value="HTTPS&lt;br&gt;ค้นข่าว">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_gm" edge="1" parent="1" source="dk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;strokeColor=#2B8A3E;strokeWidth=1.5;dashed=1;dashPattern=6 3;fontSize=10;fontStyle=1;fontColor=#2B8A3E;labelBackgroundColor=#FFFFFF;fontFamily=Arial;exitX=1;exitY=0.643;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gm" value="STEP 1, 3, 4&lt;br&gt;prompt / JSON">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
