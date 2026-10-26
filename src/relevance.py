@@ -9,7 +9,6 @@ relevance.py
   GEMINI_API_KEY = "..."       (ใช้ key ตัวเดียว)
   WORLD_NEWS_API_KEY = "..."
   MODEL = "gemini-..."         (ไม่ใส่ = ใช้ DEFAULT_MODEL)
-  FALLBACK_MODEL = "gemini-..."
 """
 
 import json
@@ -34,8 +33,6 @@ if _SECRETS.exists():
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite"
 MODEL = (os.environ.get("MODEL") or DEFAULT_MODEL).strip()
-# โมเดลสำรองเมื่อ MODEL หลักขึ้น 5xx ซ้ำ (ตั้งใน secrets.toml ด้วย FALLBACK_MODEL=... ว่าง = ไม่สลับ)
-FALLBACK_MODEL = (os.environ.get("FALLBACK_MODEL") or "gemini-3.5-flash-lite").strip()
 POS, NEG = "relevant", "not relevant"
 
 RETRY_CODES = {429, 500, 502, 503, 504}
@@ -72,12 +69,14 @@ def _pick_key() -> int:
 def generate(prompt: str, config: types.GenerateContentConfig | None = None) -> str:
     """เรียก Gemini ด้วย key ที่สุ่มมา ถ้า key นั้นโดน 429 จะพักมันไว้แล้วสลับไปใช้ key อื่นทันที"""
     clients = get_clients()
-    model = MODEL
     overloaded = 0
     for attempt in range(MAX_ATTEMPTS):
         i = _pick_key()
         try:
-            response = clients[i].models.generate_content(model=model, contents=prompt, config=config)
+            response = clients[i].models.generate_content(model=MODEL, contents=prompt, config=config)
+            if not response.text:
+                finish = response.candidates[0].finish_reason if response.candidates else None
+                print(f"   Gemini ตอบว่าง finish_reason={finish} prompt_feedback={response.prompt_feedback}")
             return response.text or ""
         except errors.APIError as e:
             if e.code not in RETRY_CODES or attempt == MAX_ATTEMPTS - 1:
@@ -86,19 +85,28 @@ def generate(prompt: str, config: types.GenerateContentConfig | None = None) -> 
                 _cooldown_until[i] = time.time() + COOLDOWN
                 print(f"   key #{i + 1} โดน rate limit (429) พักไว้ {COOLDOWN} วินาที สลับไปใช้ key อื่น")
             else:
-                # 5xx เป็นปัญหาฝั่งโมเดล (สลับ key ไม่ช่วย) ถ้าเจอซ้ำ 3 ครั้งให้ลองโมเดลสำรอง
+                # 5xx เป็นปัญหาฝั่งโมเดล (สลับ key ไม่ช่วย) รอแล้วลองใหม่
                 overloaded += 1
-                if overloaded == 3 and FALLBACK_MODEL and model != FALLBACK_MODEL:
-                    model = FALLBACK_MODEL
-                    print(f"   {MODEL} ล่ม/โหลดเต็ม สลับไปใช้ {model}")
-                wait = 5 * 2 ** min(attempt, 3)
+                wait = 2 * 2 ** min(overloaded - 1, 2)   # 2, 4, 8, 8, ... วินาที
                 print(f"   Gemini error {e.code} รอ {wait} วินาทีแล้วลองใหม่...")
                 time.sleep(wait)
     raise RuntimeError("unreachable")
 
 
+# ปิด safety filter ที่ปรับได้ เพราะข่าวสงคราม/อาชญากรรมอาจโดนบล็อกจน Gemini ตอบว่าง
+SAFETY_OFF = [
+    types.SafetySetting(category=c, threshold=types.HarmBlockThreshold.BLOCK_NONE)
+    for c in (
+        types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+        types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+        types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+    )
+]
+
 JUDGE_CONFIG = types.GenerateContentConfig(
     temperature=0,
+    safety_settings=SAFETY_OFF,
     response_mime_type="application/json",
     response_schema={
         "type": "object",
@@ -131,7 +139,12 @@ Article text:
 Answer with the label and a one-sentence reason."""
 
     raw = generate(prompt, JUDGE_CONFIG)
-    data = json.loads(raw)
+    if not raw.strip():
+        return NEG, "Gemini ไม่ตอบ (อาจโดน safety filter)"
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return NEG, f"Gemini ตอบไม่ใช่ JSON: {raw[:100]}"
     label = data.get("label", "").strip().lower()
     if label not in (POS, NEG):
         raise ValueError(f"Gemini ตอบ label ไม่ถูกต้อง: {raw[:200]}")

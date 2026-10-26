@@ -8,6 +8,7 @@ import html
 import io
 import os
 import re
+import time
 
 import streamlit as st
 from openpyxl import Workbook
@@ -22,11 +23,10 @@ except Exception:
 
 import news_comparator as nc  # noqa: E402
 
-MAX_RESULTS = 10
+MAX_RESULTS = 8
 DAYS_BACK = 30
 SENTIMENT_COLORS = {"positive": "#4ade80", "negative": "#f87171", "neutral": "#facc15"}
 
-# (หัวคอลัมน์, key ใน result, ความกว้าง)
 EXCEL_COLUMNS = [
     ("Source", "source", 22),
     ("Country", "country", 10),
@@ -76,8 +76,21 @@ def get_keyword(text: str) -> str:
 
 
 @st.cache_data(show_spinner=False, ttl=3600)
-def get_articles(keyword: str) -> list[dict]:
-    return nc.fetch_news(keyword, MAX_RESULTS, DAYS_BACK)
+def get_articles(keyword: str, user_input: str) -> tuple[list[dict], str]:
+    return nc.find_articles(keyword, user_input, MAX_RESULTS, DAYS_BACK)
+
+
+# cache ทีละข่าว แล้วอัปเดต progress bar นอกฟังก์ชัน เพราะ st.cache_data ห้ามเรียก element
+# ที่สร้างไว้นอกฟังก์ชัน (CacheReplayClosureError) ข่าวที่เคยตัดสินแล้วจะไม่เรียก Gemini ซ้ำ
+@st.cache_data(show_spinner=False, ttl=3600)
+def judge_article(topic: str, title: str, text: str) -> tuple[str, str]:
+    time.sleep(nc.JUDGE_DELAY)  # เว้นช่วงกัน rate limit เฉพาะตอนเรียก Gemini จริง
+    return nc.judge_relevance(topic, title, text)
+
+
+@st.cache_data(show_spinner=False, ttl=3600)
+def get_results(keyword: str, relevant: list[dict]) -> list[dict]:
+    return nc.compare_perspectives(keyword, relevant)
 
 
 text = st.text_input("Enter a news topic you are interested in", placeholder="e.g. Brydon Carse charged over nightclub incident")
@@ -85,28 +98,33 @@ text = st.text_input("Enter a news topic you are interested in", placeholder="e.
 if st.button("Analyze", type="primary") and text.strip():
     text = text.strip()
     st.session_state.pop("analysis", None)
-    bar = st.progress(0.0, text="Processing, please wait")
+    # ข้อความบน bar บอกขั้นที่กำลังทำอยู่ จึงตั้งก่อนเริ่มแต่ละขั้น
+    bar = st.progress(0.0, text="Extracting search keywords...")
     try:
         keyword = get_keyword(text)
-        bar.progress(0.1, text="Processing, please wait")
+        bar.progress(0.1, text="Searching for news articles...")
 
-        articles = get_articles(keyword)
-        bar.progress(0.2, text="Processing, please wait")
+        articles, keyword = get_articles(keyword, text)
+        bar.progress(0.2, text=f"Checking relevance (0/{len(articles)})...")
         if not articles:
             bar.empty()
             st.warning("No news found. Try a different keyword.")
             st.stop()
 
-        def on_progress(i, total, a, label, reason):
-            bar.progress(0.2 + 0.65 * i / total, text="Processing, please wait")
-
-        relevant = nc.filter_relevant(text, articles, on_progress)
+        relevant = []
+        for i, a in enumerate(articles, 1):
+            label, reason = judge_article(text, a["title"], a["text"][:nc.JUDGE_CHARS])
+            print(f"  {'✓' if label == nc.POS else '✗'} [{a['source']}] {a['title'][:70]}  ({reason})")
+            if label == nc.POS:
+                relevant.append(a)
+            bar.progress(0.2 + 0.65 * i / len(articles), text=f"Checking relevance ({i}/{len(articles)})...")
         if not relevant:
             bar.empty()
             st.warning("No relevant news found. Try a different keyword.")
             st.stop()
 
-        results = nc.compare_perspectives(keyword, relevant)
+        bar.progress(0.85, text="Comparing perspectives...")
+        results = get_results(keyword, relevant)
         bar.progress(1.0, text="Done")
         bar.empty()
     except nc.errors.APIError as err:
