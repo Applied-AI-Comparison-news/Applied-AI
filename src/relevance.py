@@ -9,7 +9,6 @@ relevance.py
   GEMINI_API_KEY = "..."       (ใช้ key ตัวเดียว)
   WORLD_NEWS_API_KEY = "..."
   MODEL = "gemini-..."         (ไม่ใส่ = ใช้ DEFAULT_MODEL)
-  FALLBACK_MODEL = "gemini-..."
 """
 
 import json

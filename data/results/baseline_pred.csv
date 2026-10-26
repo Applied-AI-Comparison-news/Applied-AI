@@ -1,4 +1,148 @@
 ﻿topic_id,difficulty,article_no,source,title,final_label,baseline_pred,outcome,baseline_reason
+T01,easy,T01-01,nbcnews.com,Missouri man learns his biological father is a rock star,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T01,easy,T01-02,nbcnews.com,"Flydubai pilot attacked captain with cockpit’s crash axe in attempted terrorist attack, UAE official says",relevant,relevant,TP,มี keyword ครบทุกคำ: ['flydubai']
+T01,easy,T01-03,newindianexpress.com,"Pilot Machchhar 'recovering well' after attack on FlyDubai flight, says Indian Embassy",relevant,relevant,TP,มี keyword ครบทุกคำ: ['flydubai']
+T01,easy,T01-04,newindianexpress.com,"VHP claims 254 Hindus killed in attacks by August this year, seeks action against 'extremist forces'",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T01,easy,T01-05,news.abplive.com,"Parliament Panels Reconstituted: Shashi Tharoor Retained, TMC Loses 2 Key Posts",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T01,easy,T01-06,liverpoolecho.co.uk,FlyDubai co-pilot who ‘nearly crashed jet’ studied at UK university,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['flydubai', 'co-pilot']"
+T01,easy,T01-07,mid-day.com,UAE: flydubai flight incident a terrorist attack; Indian pilot Smit Machchhar hit with crash axe by co-pilot,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['flydubai', 'co-pilot']"
+T01,easy,T01-08,news.abplive.com,‘Proud He Is Part Of Our Team’: UAE Deputy PM Visits Smit Machchhar,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T01,easy,T01-09,foxnews.com,JACK CARR: The lesson from FlyDubai is simple. Be ready to save yourself,relevant,relevant,TP,มี keyword ครบทุกคำ: ['flydubai']
+T01,easy,T01-10,latestly.com,World News | Proud He is Part of Our Nation’s Story: UAE Deputy PM Meets Captain Machchhar in Hospital,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T02,hard,T02-01,thenews.com.pk,North Korea tests AI-powered strategic missile as Seoul-Pyongyang DMZ tensions escalate,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-02,dawn.com,North Korea says test of intermediate-range strategic missile included use of AI,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-03,timesofindia.indiatimes.com,N Korea test fires ballistic missile after Seoul demands apology for landmine blast,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['korea', 'missile']"
+T02,hard,T02-04,kuwaittimes.com,North Korea fires ballistic missile amid DMZ blast row | Kuwait Times Newspaper,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-05,today.az,North Korea launches ballistic missile toward East Sea,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-06,france24.com,North Korea launches ballistic missile as tensions with Seoul grow over border mine blasts,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-07,egyptian-gazette.com,North Korea fires unidentified projectile into sea,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea']"
+T02,hard,T02-08,newindianexpress.com,North Korea fires ballistic missile after Seoul's apology demand,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-09,theguardian.com,North Korea launches ballistic missile after Seoul demands apology over wounded soldiers,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T02,hard,T02-10,bhaskarlive.in,North Korea fires ballistic missile towards East Sea,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['north', 'korea', 'missile']"
+T03,hard,T03-01,sabcnews.com,DRC health minister says worst of Ebola is over,relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-02,newsbreaknigeria.com,Uganda announces it has dropped yellow fever certificate requirement for all travellers in 2026,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T03,hard,T03-03,qazinform.com,"DR Congo says Ebola outbreak eases in areas despite death toll topping 4,000",relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-04,winnmediaskn.com,"Ebola death toll surpasses 4,000 as DR Congo struggles to suppress outbreak",relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-05,irishexaminer.com,Drug trial seeks to halt DR Congo’s deadliest Ebola outbreak,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-06,tribuneonlineng.com,"Emerging diseases: GMD tasks private hospitals on preparedness, quality care",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T03,hard,T03-07,newindianexpress.com,"An Ebola treatment center was burned down as the death toll in Congo passes 4,000",relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-08,theepochtimes.com,"Deaths From the Ebola Outbreak in Congo Exceed 4,000",relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-09,abcnews.com,Inside the study for a remedy to fight Congo's deadliest Ebola outbreak,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['ebola']
+T03,hard,T03-10,timesofearth.com,"Thousands flee Congo Ebola-hit camp, stoking concerns about disease spread",relevant,relevant,TP,มี keyword ครบทุกคำ: ['ebola']
+T04,medium,T04-01,nbcnews.com,U.S. halts consular services in Brazil ahead of high-stakes election,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['brazil', 'election']"
+T04,medium,T04-02,euobserver.com,Brazil’s cliff‑hanger election could rob EU of key ally in Latin America,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['brazil', 'election']"
+T04,medium,T04-03,france24.com,"Flavio Bolsonaro: In the name of the father, sons, and holy ideology",relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T04,medium,T04-04,csmonitor.com,Brazil is regulating AI use in elections. Here’s why it’s been a challenge.,relevant,relevant,TP,มี keyword ครบทุกคำ: ['brazil']
+T04,medium,T04-05,newsweek.com,Donald Trump&#039;s &#039;Donroe Doctrine&#039; Faces Biggest Test Yet in Brazil,relevant,relevant,TP,มี keyword ครบทุกคำ: ['brazil']
+T04,medium,T04-06,en.mercopress.com,Alternative media and Trump are influencing Brazilian voters,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T04,medium,T04-07,en.mercopress.com,Brazil votes with Lula and Flávio Bolsonaro tied and a small group of undecided voters holding the key,relevant,relevant,TP,มี keyword ครบทุกคำ: ['brazil']
+T04,medium,T04-08,rawstory.com,Trump admin shocks with 'unprecedented' move citing unspecified 'security concerns',relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T04,medium,T04-09,newindianexpress.com,US and Australia suspend consular services in Brazil ahead of election citing security concerns,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['brazil', 'election']"
+T04,medium,T04-10,trinidadtribune.com,US and Australia suspend diplomatic operations in Brazil before election - Trinidad Tribune – Latest,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['brazil', 'election']"
+T05,easy,T05-01,antiguatribune.com,"Dutch royal house helped slave trade to survive, study finds - Antigua Tribune – Daily Antigua &amp;",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['dutch', 'royal', 'house']"
+T05,easy,T05-02,brecorder.com,Dutch study says royal family made huge profits from colonialism,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['dutch', 'royal']"
+T05,easy,T05-03,arabnews.com,Dutch study says royal family made huge profits from colonialism,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['dutch', 'royal']"
+T05,easy,T05-04,curacaochronicle.com,King Willem-Alexander Calls Findings on Royal Family’s Colonial Past ‘Painful and Confronting’,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['royal', 'colonial']"
+T05,easy,T05-05,dutchnews.nl,Dutch royal house earned nearly half a billion from slavery,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['dutch', 'royal', 'house']"
+T05,easy,T05-06,emirates247.com,Dutch royal house was 'wholeheartedly' involved in colonial exploitation,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['dutch', 'royal', 'house', 'colonial']"
+T05,easy,T05-07,dailymail.com,"Cheap flights, blissful sunshine... and no crowds! I've spent 21 years as a travel writer and these are the 18 places you must visit for some October sun: ROB CROSSAN",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T05,easy,T05-08,unitedkingdomnews.net,CANADA-SURREY-9/11 ATTACKS-COMMEMORATION,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T05,easy,T05-09,britainnews.net,CANADA-SURREY-9/11 ATTACKS-COMMEMORATION,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T05,easy,T05-10,boston.com,Recent homes sales in Greater Boston (Sept. 9),not relevant,not relevant,TN,ไม่พบคำ: ['dutch']
+T06,medium,T06-01,brecorder.com,325 million barrels of oil from strategic reserves released: IEA,relevant,relevant,TP,มี keyword ครบทุกคำ: ['reserves']
+T06,medium,T06-02,independent.co.uk,Europe to release ‘massive amount of diesel’ after Trump’s supply threat,relevant,relevant,TP,มี keyword ครบทุกคำ: ['diesel']
+T06,medium,T06-03,cphpost.dk,G7 releases oil reserves – could it bring down Denmark’s record-high diesel prices?,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['diesel', 'reserves']"
+T06,medium,T06-04,newvision.co.ug,G7 agrees deal to ease global energy supply concerns,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T06,medium,T06-05,onlanka.com,Sri Lanka begins jet fuel pipeline and new storage tank projects,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T06,medium,T06-06,qazinform.com,Oil prices drop as Europe decides to release diesel reserves,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['diesel', 'reserves']"
+T06,medium,T06-07,newsbreaknigeria.com,IEA Member Countries Release 325 Million Barrels Of Oil From Strategic Reserves,relevant,relevant,TP,มี keyword ครบทุกคำ: ['reserves']
+T06,medium,T06-08,independent.co.uk,What is happening with diesel – and should we be worried?,relevant,relevant,TP,มี keyword ครบทุกคำ: ['diesel']
+T06,medium,T06-09,thejournal.ie,Trump claims diesel ban was ‘never really on the table’ after Europe releases reserve barrels,relevant,relevant,TP,มี keyword ครบทุกคำ: ['diesel']
+T06,medium,T06-10,birminghammail.co.uk,Cheapest diesel prices in Birmingham as prices soar to all-time high,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['diesel']
+T07,medium,T07-01,timesnownews.com,Oil Prices Hover Near $100 As G7 Unleashes 100 Million Barrels,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-02,dailycaller.com,Oil Prices Drop After Trump Pressure Pushes Europe Toward Releasing Diesel Reserves,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-03,theepochtimes.com,"G7 Nations to Release 100 Million Barrels of Diesel, Crude",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-04,bbc.bm,Oil prices rise as China suspends fuel exports,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['fuel']
+T07,medium,T07-05,gulfnews.com,US tells European allies to release strategic reserves 'immediately' to lower diesel prices,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-06,globalnews.ca,"As Texas declares state of emergency over fuel shortage, what’s dyed diesel",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['texas', 'fuel', 'shortage']"
+T07,medium,T07-07,brecorder.com,Oil prices rise $3 as China suspends fuel exports,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['fuel']
+T07,medium,T07-08,newsweek.com,Map Shows States Suspending Gas Tax as Indiana Extends Pause,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-09,newsweek.com,"Susan Collins, Troy Jackson Must Convince Voters on 5 Issues at 1st Debate",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T07,medium,T07-10,fool.com,Uranium Energy (UEC) Q4 2026 Earnings Call Transcript,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T08,medium,T08-01,newindianexpress.com,US Coast Guard intercepts ship transporting fuel to Cuba,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['cuba', 'fuel', 'ship']"
+T08,medium,T08-02,abcnews.com,US Coast Guard says it seized Cuba-bound ships with thousands of gallons of oil,relevant,relevant,TP,มี keyword ครบทุกคำ: ['cuba']
+T08,medium,T08-03,theguardian.com,US Coast Guard says it has intercepted ship carrying fuel to Cuba - Cuba,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['cuba', 'fuel', 'ship']"
+T08,medium,T08-04,manilatimes.net,US Coast Guard intercepts ship transporting fuel to Cuba,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['cuba', 'fuel', 'ship']"
+T08,medium,T08-05,thenews.com.pk,US Coast Guard seizes Cuba-bound ship carrying ‘large quantities’ of fuel,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['cuba', 'fuel', 'ship']"
+T08,medium,T08-06,aol.com,US Coast Guard says it seized Cuba-bound ships with thousands of gallons of oil,relevant,relevant,TP,มี keyword ครบทุกคำ: ['cuba']
+T08,medium,T08-07,zerohedge.com,"Futures Rise As Oil Drops, Dragging Rates Lower",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T08,medium,T08-08,foxnews.com,China ‘wiretapped Red Sea’ with spy hub 6 miles from US base: ex Pentagon official warns,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T08,medium,T08-09,morningstaronline.co.uk,Voting against the blockade is no longer enough,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T09,hard,T09-01,bruneinews.net,Wall Street closes week with strong gains despite weak jobs report,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['jobs', 'report']"
+T09,hard,T09-02,independent.co.uk,"America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T09,hard,T09-03,economictimes.indiatimes.com,"America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T09,hard,T09-04,eu.freep.com,Why a weaker jobs report for September was good news for investors,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['september', 'jobs', 'report']"
+T09,hard,T09-05,staradvertiser.com,"U.S. job growth slows sharply in September, unemployment rises",relevant,relevant,TP,มี keyword ครบทุกคำ: ['september']
+T09,hard,T09-06,zerohedge.com,Wall Street's Midterm Map Just Flipped - Here's What Goldman And JPMorgan See,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T09,hard,T09-07,huffpost.com,"Unemployment Ticks Up, U.S. Add Disappointing Number Of Jobs In September",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['september', 'jobs']"
+T09,hard,T09-08,thedailystar.net,"US job growth undershoots expectations in September, but labor market remains stable",relevant,relevant,TP,มี keyword ครบทุกคำ: ['september']
+T09,hard,T09-09,airforcetimes.com,Unemployment rate for post-9/11 vets up as job market slumps,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T10,medium,T10-01,bizwatchnigeria.ng,Elon Musk’s net worth surges by $61bn as SpaceX and Tesla shares rally toward trillion-dollar milestone,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['tesla']
+T10,medium,T10-02,newswire.co.nz,New Zealand electric car registrations triple as petrol tops $3 a litre,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T10,medium,T10-03,thewest.com.au,Honda Super-One has a lot of attitude,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T10,medium,T10-04,theverge.com,Rivian’s sales pop as the company’s big R2 bet starts to pay off,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T10,medium,T10-05,shacknews.com,"Evening Reading - October 2, 2026",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T10,medium,T10-06,techcrunch.com,Tesla sustains its EV sales momentum despite US troubles,relevant,relevant,TP,มี keyword ครบทุกคำ: ['tesla']
+T10,medium,T10-07,fool.com,"Stock Market Today, Oct. 2: Tesla Rises on Q3 Delivery Beat",relevant,relevant,TP,มี keyword ครบทุกคำ: ['tesla']
+T10,medium,T10-08,fool.com,"Stock Market Today, Oct. 2: Rivian Beats Q3 Delivery Estimates on Record Production Pace",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T10,medium,T10-09,fool.com,"Tesla Delivered 486,532 Vehicles in Q3. Here’s Why the Real Test Could Come on Oct. 21.",relevant,relevant,TP,มี keyword ครบทุกคำ: ['tesla']
+T10,medium,T10-10,fool.com,"Stock Market Midday, Oct. 2: Stocks Rally as Weak Jobs Data Cools Fed Rate Hike Bets",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T11,easy,T11-01,thehindubusinessline.com,Anthropic said to target mega-IPO before thanksgiving holiday,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['anthropic', 'ipo', 'thanksgiving']"
+T11,easy,T11-02,breitbart.com,"Anthropic Aims for November IPO, Warns Trump Administration Is a Business Risk",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['anthropic', 'ipo']"
+T11,easy,T11-03,ibtimes.com,Anthropic Reportedly Targeting Historic $2 Trillion IPO. The AI Giant Could Hit Public Markets Before Thanksgiving.,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['anthropic', 'ipo', 'thanksgiving']"
+T11,easy,T11-04,freepressjournal.in,"Anthropic Eyes November IPO, Could Begin Marketing As Early As Nov 9",relevant,relevant,TP,"มี keyword ครบทุกคำ: ['anthropic', 'ipo']"
+T11,easy,T11-05,ndtvprofit.com,Musk To Co-Lead US Project On Future Warfare,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T11,easy,T11-06,financialpost.com,Anthropic said to target mega-IPO before U.S. Thanksgiving holiday,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['anthropic', 'ipo', 'thanksgiving']"
+T12,hard,T12-01,washingtonexaminer.com,They’re profiting off your panic: How AI fear became a business model,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-02,standard.co.uk,London and the AI apocalypse: Is the capital becoming dangerously dependent on artificial intelligence?,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-03,techcrunch.com,"Amazon responds to data center backlash, says it no longer uses NDAs",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-04,thehindubusinessline.com,Anthropic said to target mega-IPO before thanksgiving holiday,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['anthropic']
+T12,hard,T12-05,theguardian.com,"OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-06,thestar.com,"Is it 'killer robots' or 'super intelligence'? At the UN, leaders see both",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-07,thenewstack.io,Anthropic’s answer to Dots and Muse is already inside Claude,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['anthropic']
+T12,hard,T12-08,mashable.com,"Stop guessing which AI is best: Get GPT, Claude, and Gemini for under $100",not relevant,relevant,FP,มี keyword ครบทุกคำ: ['100']
+T12,hard,T12-09,thenews.com.pk,OpenAI reveals new detail on Australia Medicare hack probe,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T12,hard,T12-10,economictimes.indiatimes.com,"What is Claude Frontier Academy, and why is Anthropic looking to train 10,000 AI engineers?",relevant,relevant,TP,มี keyword ครบทุกคำ: ['anthropic']
+T13,medium,T13-01,brisbanetimes.com.au,We are crusading against things that would keep us safe – like data centres,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T13,medium,T13-02,smh.com.au,We are crusading against things that would keep us safe – like data centres,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T13,medium,T13-03,theage.com.au,We are crusading against things that would keep us safe – like data centres,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T13,medium,T13-04,businessinsider.com,OpenAI leader who quit says he can do more for safety from outside the company,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['openai']
+T13,medium,T13-05,foxnews.com,Former Anthropic security leader warns AI agents are becoming too autonomous for humans to keep them in check,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T13,medium,T13-06,dailycaller.com,Trump Accord Enshrines Light-Touch Regulation of AI,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T13,medium,T13-07,cbsnews.com,Alice Cooper on the evolution of his alter ego,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T13,medium,T13-08,cbsnews.com,Extended interview: Alice Cooper,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T13,medium,T13-09,townhall.com,Citizen Sleuths Expose the Rogue AI Big Tech Hid,relevant,not relevant,FN,ไม่มี keyword ในบทความ
+T13,medium,T13-10,rt.com,US court halts AI nude-image ban challenged by Musk,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T14,hard,T14-01,jamaica-gleaner.com,US stocks rose near record levels after latest jobs report eased worries,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['record']
+T14,hard,T14-02,britainnews.net,(SP)MALAYSIA-SEPANG-F1-BAHRAIN GRAND PRIX 2026-QUALIFYING,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T14,hard,T14-03,theinventory.com,"KOTIN Gaming PC With RTX 5060 Ti Now $1,300 (Save $100)",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T14,hard,T14-04,livemint.com,Nvidia on fire again after massive $1 trn wipe out recently - what’s boosting stock of world’s most valuable company,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['nvidia', 'stock']"
+T14,hard,T14-05,economictimes.indiatimes.com,Nvidia falls short of May record as value nears $6 trn,relevant,relevant,TP,"มี keyword ครบทุกคำ: ['nvidia', 'record']"
+T14,hard,T14-06,investors.com,"Dow Jones Futures: Nasdaq Hits High As Nvidia, SpaceX, Bloom Energy Flash Buy Signals. What To Do Now.",not relevant,relevant,FP,"มี keyword ครบทุกคำ: ['nvidia', 'high']"
+T14,hard,T14-07,mashable.com,"21 early October Prime Day tech deals, hand-picked by our gadget-obsessed experts",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T14,hard,T14-08,fool.com,Is a Microsoft Stock Split Coming After 23 Years?,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['stock']
+T14,hard,T14-09,investors.com,"Dow Jones Futures: Nasdaq Hits High As Nvidia, SpaceX, Bloom Energy Flash Buy Signals. What To Do Now.",not relevant,relevant,FP,"มี keyword ครบทุกคำ: ['nvidia', 'high']"
+T14,hard,T14-10,investors.com,"Stock Market Finishes Strong, Yields Off Highs; Micron, Meta, Nvidia, Tesla In Focus: Weekly Review",not relevant,relevant,FP,"มี keyword ครบทุกคำ: ['nvidia', 'stock']"
+T15,hard,T15-01,manilatimes.net,"PH 4-gold haul in Asiad matches 2018, 2022 wins",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-02,abs-cbn.com,EJ Obiena trades pole for racket in 'finals match' with Alex Eala | ABS-CBN Sports,not relevant,relevant,FP,มี keyword ครบทุกคำ: ['obiena']
+T15,hard,T15-03,manilatimes.net,5th gold eludes Philippines in Nagoya Asian Games,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-04,manilatimes.net,"Jeus Gabriel Yape notches gold in Asian Games, fourth for PH",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-05,manilatimes.net,POC chief says surpassing gold medal target still possible,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-06,abs-cbn.com,"EJ Obiena rediscovers joy in pole vaulting, feels ‘reborn’ after Asiad gold | ABS-CBN Sports",relevant,relevant,TP,มี keyword ครบทุกคำ: ['obiena']
+T15,hard,T15-07,manilatimes.net,Paalam gets shot at Asian Games gold,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-08,manilatimes.net,Obiena grateful after Asiad defense,relevant,relevant,TP,มี keyword ครบทุกคำ: ['obiena']
+T15,hard,T15-09,english.anhuinews.com,Asian Games | Day 10: China sweeps sprint relays as An retains badminton crown,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
+T15,hard,T15-10,manilatimes.net,WATCH: PISTON continues strike; Manibela calls off protest,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
 T16,hard,T16-01,yardbarker.com,5 WNBA teams that could pursue Napheesa Collier in free agency,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
 T16,hard,T16-02,yardbarker.com,Dream 'locked in' for Game 1 against upset-minded Liberty,not relevant,not relevant,TN,ไม่มี keyword ในบทความ
 T16,hard,T16-03,foxnews.com,"Fever 2026 timeline: How Caitlin Clark, Sophie Cunningham and rivals likely changed the WNBA forever",not relevant,not relevant,TN,ไม่มี keyword ในบทความ
