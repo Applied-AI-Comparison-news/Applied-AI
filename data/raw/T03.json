@@ -1,0 +1,192 @@
+{
+  "topic": {
+    "id": "T03",
+    "category": "Health",
+    "difficulty": "hard",
+    "query": "Ebola",
+    "description": "New Ebola cases recorded in rebel-held eastern Congo (early Oct 2026). Other outbreaks/countries or general Ebola research are NOT relevant.",
+    "seed_url": ""
+  },
+  "fetched_at": "2026-10-03T20:58:53",
+  "params": {
+    "text": "Ebola",
+    "language": "en",
+    "earliest-publish-date": "2026-09-03 20:58:53",
+    "number": 10
+  },
+  "response": {
+    "offset": 0,
+    "number": 10,
+    "available": 743,
+    "news": [
+      {
+        "id": 471575230,
+        "title": "DRC health minister says worst of Ebola is over",
+        "text": "The Democratic Republic of Congo’s (DRC) health minister says the country’s fast-spreading Ebola outbreak has reached its peak following a reduction in cases and deaths in some of the hotspots in the country’s northeast.\n\nHowever, Minister Roger Kamba called for reinforcing health measures to end the outbreak.\n\nThe Ebola outbreak in the Democratic Republic of Congo has spread across seven provinces in the country’s east and northeast since mid-May.\n\nThe disease emerged while the country was grappling with a conflict that has displaced millions and caused many deaths.\n\nThe ongoing insecurity and community mistrust have complicated the response effort.\n\nHealth authorities, however, say cases and deaths of the deadly disease are now declining in Ituri and other provinces.\n\n“We have started to see a stabilisation in the number of cases in North Kivu as well. What’s certain is that the peak is behind us. The other question has shown the resilience of our health system; this is the 17th Ebola outbreak, but at the same time we are facing multiple disease outbreaks like Cholera, measles and Mpox, which have put a strain on our health system,” says the DRC’s Health Minister, Dr. Roger Kamba.\n\nThe World Health Organisation (WHO) says the disease is still not under control and has called for a scale-up of interventions. Most of the infections and deaths are still reported within communities, suggesting people are not taking the sick to health facilities early.\n\nThe latest Ebola outbreak is the 17th to occur in the DRC since 1976. Experts say it is caused by the rare Bundibugyo strain for which there is currently no approved vaccine. Scientists in the UK and Canada are conducting clinical trials for vaccines targeting the Bundibugyo strain of Ebola.\n\nThey plan to make it available for use before the end of this year.\n\nVIDEO | DR Congo’s Ebola outbreak tops 8 000 confirmed cases\n\nCREDIT: Chris Ocamringa",
+        "summary": "The latest Ebola outbreak is the 17th to occur in the Democratic Republic of Congo, since 1976",
+        "url": "https://www.sabcnews.com/sabcnews/drc-health-minister-says-worst-of-ebola-is-over",
+        "image": "https://www.sabcnews.com/sabcnews/wp-content/uploads/2026/10/Ebola-R.png",
+        "video": null,
+        "publish_date": "2026-10-03 11:01:48",
+        "author": "Nomcebo Miya",
+        "authors": [
+          "Nomcebo Miya"
+        ],
+        "language": "en",
+        "category": "politics",
+        "source_country": "za",
+        "sentiment": -0.386
+      },
+      {
+        "id": 471570090,
+        "title": "Uganda announces it has dropped yellow fever certificate requirement for all travellers in 2026",
+        "text": "Uganda announces it has dropped yellow fever certificate requirement for all travellers in 2026\n\nUganda confirmed that yellow fever vaccination certificates were no longer required for entry, updating visa rules while maintaining Ebola border health screenings.\n\nUganda confirmed that yellow fever vaccination certificates were no longer required for entry, updating visa rules while maintaining Ebola border health screenings.",
+        "url": "https://www.newsbreaknigeria.com/article/uganda-announces-it-has-dropped-yellow-fever-certificate-requirement-for-all-tra-1ba3du",
+        "image": "https://newsbreaknigeria.com/api/img?u=aHR0cHM6Ly9jZG4ubGVnaXQubmcvaW1hZ2VzLzEyMDB4Njc1LzIzM2ZlM2M0NjdhOTljNWUuanBlZz92PTE&s=8D9-XX8ALGxEwEibgBrTgw4xNYmWXULCnuFbIDPK18c",
+        "video": null,
+        "publish_date": "2026-10-03 12:30:41",
+        "author": null,
+        "language": "en",
+        "source_country": "ng",
+        "sentiment": 0.142
+      },
+      {
+        "id": 471569110,
+        "title": "DR Congo says Ebola outbreak eases in areas despite death toll topping 4,000",
+        "text": "\"We are no longer talking about outbreaks at the provincial level, but outbreaks concentrated in individual health zones,\" Health Minister Roger Kamba told a press briefing in Kinshasa.\n\nData released Friday showed that the outbreak has claimed 4,018 lives among 8,300 confirmed cases across seven provinces, with an overall case fatality rate of 48.4 percent. A total of 2,162 patients have recovered.\n\nOf the 63 health zones affected across seven provinces since the outbreak began, 12 have reported no new cases for 42 days, Kamba said.\n\n\"The situation remains highly variable, but we can see that the number of health zones reporting cases has decreased,\" he said.\n\nDespite signs of localized improvement in the DRC's Ebola outbreak situation, international medical charity Medecins Sans Frontieres warned Thursday that the actual toll was likely higher than officially reported due to gaps in disease surveillance and case detection.\n\nThe Ebola outbreak declared in May has become the largest and deadliest ever recorded in the DRC and the second largest Ebola outbreak worldwide, after the 2014-2016 one in West Africa.\n\nEarlier, it was reported Japan had been hit with a flu outbreak, affecting all 47 prefectures.",
+        "summary": "Health authorities in the Democratic Republic of the Congo (DRC) said Friday that the Ebola outbreak has eased in some areas with no new cases reported in more health zones for weeks despite that the total death toll has surpassed 4,000, Xinhua reports. ",
+        "url": "https://qazinform.com/news/dr-congo-says-ebola-outbreak-eases-in-areas-despite-death-toll-topping-4000-432335",
+        "image": "https://img.inform.kz/kazinform-photobank/media/2026-05-19/6149343a-e3e6-4187-9217-85ee253c8f52.jpeg",
+        "video": null,
+        "publish_date": "2026-10-03 04:19:00",
+        "author": "Adlet Seilkhanov",
+        "authors": [
+          "Adlet Seilkhanov"
+        ],
+        "language": "en",
+        "source_country": "kz",
+        "sentiment": -0.215
+      },
+      {
+        "id": 471560756,
+        "title": "Ebola death toll surpasses 4,000 as DR Congo struggles to suppress outbreak",
+        "text": "The Democratic Republic of Congo’s Ebola outbreak has now killed more than 4,000 people, according to government data, making it the worst epidemic in the country’s history.\n\nFigures released on Friday showed that the death toll has risen to 4,018, and confirmed cases had ⁠reached 8,300 across seven provinces, as the government continues to struggle to contain the outbreak.\n\nWeak infrastructure, the remoteness of the region in eastern DRC, and ongoing conflict with armed groups near the borders with South Sudan, Uganda, and Rwanda have hindered efforts to respond to cases quickly and effectively.\n\nThe United Nations reported on Friday that an Ebola-hit camp housing a transit centre for infected patients was burned by soldiers earlier this week as they were looking for weapons on the outskirts of Bunia, capital city of Ituri Province, which is at the epicentre of the outbreak.\n\nThe incident forced 19,000 people to flee the camp.\n\n“The enormous challenge of halting the spread of Ebola in the Democratic Republic of the Congo (DRC) just became even harder after a key transit centre for patients requiring treatment burned down in Ituri province,” the UN said.",
+        "summary": "Burning of a Ebola-hit transit camp sends 19,000 fleeing, illustrating the difficulties of controlling epidemic. By Al Jazeera Staff, Reuters and The Associated Press The Democratic Republic of Congo’s Ebola outbreak has now killed more than 4,000 people, according to government data, making it the worst epidemic in the country’s history. Figures released on Friday [&#8230;]",
+        "url": "https://www.winnmediaskn.com/ebola-death-toll-surpasses-4000-as-dr-congo-struggles-to-suppress-outbreak",
+        "image": "https://www.winnmediaskn.com/wp-content/uploads/2020/03/logo-1.png",
+        "video": null,
+        "publish_date": "2026-10-02 21:13:18",
+        "author": "kevon",
+        "authors": [
+          "kevon"
+        ],
+        "language": "en",
+        "source_country": "kn",
+        "sentiment": -0.825
+      },
+      {
+        "id": 471557662,
+        "title": "Drug trial seeks to halt DR Congo’s deadliest Ebola outbreak",
+        "text": "The trial began in July and is one of several studies launched to find some protection and another way of at least slowing the outbreak.\n\nThe trial is taking place at a health centre in the eastern province of Ituri, the epicentre of the outbreak. The participants include people who have been exposed to the disease in this outbreak, among them health workers and patients’ relatives.\n\nAt least 8,300 confirmed cases, including 4,000 deaths, have been recorded since this Ebola outbreak was declared in mid-May in eastern DR Congo.\n\nIt has spread to seven provinces and continues to outpace efforts to track and slow it, authorities say.\n\nThe trial is testing Gilead’s experimental antiviral pill, called obeldesivir, which is given soon after suspected contact with the virus to prevent the disease from developing. That approach is called post-exposure prophylaxis, or PEP.\n\nOne participant in the trial known as EBO-PEP said she enrolled in the study in August after her husband tested positive for Ebola. She says so far no-one from her family has developed symptoms.\n\nShe and other trial participants requested anonymity to protect their privacy due to the sensitive nature of the Ebola outbreak and the medical protocol involved.\n\n“I realised that if I even touched my husband — and I did touch him, his vomit, everything — (it meant that) I was a direct contact. I could have also passed on this contagious disease. I could have been contaminated,” the participant said.\n\nShe said she knew of entire households which had become infected after a family member tested positive for Ebola. But so far no-one from her family has developed symptoms, she says.\n\nEbola disease only spreads once symptoms begin. People exposed to infected patients have to wait to see if they become ill. Finding people at high risk of incubating the Bundibugyo virus – also known as contact tracing – has proved difficult in DR Congo.\n\nAnother participant said two of their family members had caught Ebola, and one of them had died. “This disease is killing. It’s better to take precautions,” he said.\n\nThe trial, coordinated by Alima, a medical non-profit body, aims to recruit nearly 1,000 adults or children over the age of 12 who have come into contact with a confirmed case within the last five days but have no symptoms. Half will get a placebo.\n\nParticipants are monitored in person every day for 21 days, with a final phone call after 42 days, according to Dr Godefroid Basara, who is working on the trial.\n\nAlima said that if trial participants begin to develop symptoms, they will immediately receive supportive treatment, which has been shown to be helpful when symptoms are caught early.\n\nIf the pill proves effective, it could help break the infection chain.\n\n“It differs from a vaccine, which may take days or weeks to provide protection. It is also different from curative treatment because it is intended for people who are not yet showing symptoms,” Alima research coordinator Dr Guilavogui Jean Paul Yassa said.\n\nDr Jacques Zawadi, an investigating physician working with ALIMA at the trial centre, said most participants are happy to take part in the study, but it had been challenging to encourage some people who live far from the centre to sign up.\n\nHe said the study is sometimes disrupted when participants find out their family members have died from the disease.\n\n“This is the biggest challenge we face. When a person is emotionally affected, it is not easy to reason with them and ensure they return to the study,” he said.\n\nThe trial partners also include Congo’s National Institute of Biomedical Research and the French institute ANRS Emerging Infectious Diseases.",
+        "summary": "More than 250 participants have been enrolled in a trial for a drug that could stop them from contracting Ebola in the Democratic Republic of the ...",
+        "url": "https://www.irishexaminer.com/world/arid-41919229.html",
+        "image": "https://www.irishexaminer.com/cms_media/module_img/10497/5248717_1_seoimage1x1_0ed8da2090a74078be32d41edc2246b3.jpg.jpg",
+        "video": null,
+        "publish_date": "2026-10-03 10:13:00",
+        "author": "Constant Same Bagalwa,Irishexaminer.com",
+        "authors": [
+          "Constant Same Bagalwa",
+          "Irishexaminer.com"
+        ],
+        "language": "en",
+        "source_country": "ie",
+        "sentiment": 0.048
+      },
+      {
+        "id": 471551278,
+        "title": "Emerging diseases: GMD tasks private hospitals on preparedness, quality care",
+        "text": "The Guild of Medical Directors (GMD), Lagos State branch, has called on private hospitals and healthcare facilities to strengthen their preparedness and response mechanisms for emerging and re-emerging diseases.\n\nThe Guild said the call had become necessary given the increasing threat of infectious diseases and the vulnerability of densely populated cities such as Lagos to rapid disease transmission.\n\nChairman of the GMD, Lagos State branch, Dr Omoniyi Fagbemi, made the call at the Guild’s 2026 Scientific Conference, Annual General Meeting and Founder’s Dinner/Awards held at the Oriental Hotel, Victoria Island, Lagos.\n\nFagbemi said the theme of the conference, which focused on emergency preparedness for emerging and re-emerging diseases, was particularly relevant to the Nigerian healthcare system.\n\nALSO READ: Non-communicable diseases draining pockets of Nigerians — Senate\n\nHe said the GMD comprised owners of hospitals, clinics, diagnostic centres and other medical facilities established by medical practitioners, adding that members were committed to providing quality healthcare while ensuring the sustainability of private medical practice.\n\nAccording to him, members are encouraged to develop their facilities to international standards and provide Nigerians with quality healthcare at affordable costs.\n\n“Our goal is to ensure that private practice in Lagos and Nigeria is both clinically standard and sustainably profitable. To that end, we have resolved that all members must be enrolled in a quality improvement programme,” he said.\n\nFagbemi recalled the 2014 Ebola outbreak in West Africa, noting that the proximity of disease outbreaks in other African countries remained a concern for Nigeria.\n\nHe also paid tribute to the late Dr Ameyo Stella Adadevoh for her role in containing the spread of Ebola in Nigeria during the 2014 outbreak.\n\nSpeaking on emerging and re-emerging infections, an infectious disease specialist at the Lagos State University Teaching Hospital (LASUTH), Dr Adefolarin Opawuye, explained that emerging diseases were those that were newly identified or had spread beyond their previous geographical or epidemiological boundaries.\n\nHe cited COVID-19 as a major recent example of an emerging disease, while describing the 2014 Ebola outbreak in West Africa as an emerging threat that affected Nigeria.\n\nOpawuye said re-emerging infections referred to diseases that had previously declined or disappeared from a population but subsequently returned.\n\nHe identified Lagos’ high population density as one of the factors that could facilitate the rapid spread of infectious diseases.\n\n“Lagos is one of the densely populated cities in the world and because of that, it is very easy to spread diseases,” he said.\n\nThe infectious disease specialist also stressed the importance of strengthening the capacity of private healthcare providers, noting that many Nigerians first seek treatment at private facilities before proceeding to teaching or general hospitals.\n\n“Most people in the country always come to the private sector first before visiting the teaching hospital or general hospitals, and that is a problem,” he said.\n\nHe therefore urged private practitioners to recognise their responsibilities in disease surveillance, early identification and appropriate management of suspected infectious diseases.\n\n“We are in the private sector and must be able to have the duty of care,” Opawuye added.\n\nFagbemi, meanwhile, said the sustainability of medical practice required more than simply expanding facilities, stressing the need for sound clinical standards and effective management.\n\n“For us to have true satisfaction in our various practices, the business of medicine must not only be stable and grow; growth is not enough, it must be sustained,” he said.\n\nThe high point of the event was the presentation of awards to distinguished medical practitioners in recognition of their contributions to healthcare and medical practice.",
+        "summary": "The Guild of Medical Directors (GMD), Lagos State branch, has called on private hospitals and healthcare facilities to strengthen their preparedness and response mechanisms for\n\n\nThe post Emerging diseases: GMD tasks private hospitals on preparedness, quality care appeared first on Tribune Online.",
+        "url": "https://tribuneonlineng.com/emerging-diseases-gmd-tasks-private-hospitals-on-preparedness-quality-care",
+        "image": "https://tribuneonlineng.com/wp-content/uploads/2026/10/GMD.png",
+        "video": null,
+        "publish_date": "2026-10-03 08:54:41",
+        "author": "Subair Mohammed",
+        "authors": [
+          "Subair Mohammed"
+        ],
+        "language": "en",
+        "source_country": "ng",
+        "sentiment": 0.084
+      },
+      {
+        "id": 471547626,
+        "title": "An Ebola treatment center was burned down as the death toll in Congo passes 4,000",
+        "text": "BUNIA, Congo: Congo's Ebola outbreak has killed more than 4,000 people, authorities said, as they struggle to contain what has become the fastest-growing Ebola outbreak in history.The latest figures released by the Health Ministry on Thursday showed that 4,018 people have died among 8,300 cases recorded since the outbreak was declared in eastern Congo on May 15.The aid group Médecins Sans Frontières, known in English as Doctors Without Borders, said Friday the outbreak has particularly worsened in the North Kivu province, accounting for 40% of new confirmed cases since the end of August.“It is like fighting a wildfire,” Stephanie Hoffman, MSF coordinator in Butembo, said. “Multiple outbreaks are developing at the same time, with varying intensity and in different locations.”Some health workers, meanwhile, gathered at the epicenter in Ituri Province to demand payment for wages owed to them. The protesters, who included surveillance team members, waved placards saying, “No money, no data!” and “No payment for months.”Some of the workers haven't been paid for August and September, said Biongi Beiza, one of the protesters in Bunia, Ituri's capital. “There is no explanation from the administration,” he said.Congolese authorities did not immediately address the issue. Front-line workers have gone on strike several times since the outbreak began, further hampering efforts to contain the disease.A senior U.N. official said an Ebola-hit displacement camp housing a transit center for infected patients was burned by soldiers earlier this week as they were looking for weapons in Kigonze, on the outskirts of Bunia, forcing 19,000 people in the camp to flee. .Creating such transit and treatment centers has been a struggle, requiring money and staff, all of which are in short supply, said Julien Harneis, the U.N. senior Ebola coordinator. \"When we lose a center, that means we lose capacity, we lose investment, and we have to start again. And above all, it means that people do not get access to the care that they really need,” Harneis said.Infected aid worker evacuated to the NetherlandsAn aid worker with MSF was infected with Ebola while working in Congo, the group said in a statement.The worker arrived in the Netherlands late Thursday on a special medical flight and was transferred to a high-level isolation unit, the Leiden University Medical Center said in a statement.“The human cost of this crisis is unprecedented in the DRC, with communities facing the largest Ebola disease outbreak ever recorded in the country,” MSF said.At least 50 health workers have died after contracting the virus.Mobile labs are helping detect cases quicklyOne way local authorities have tried to contain the outbreak is through mobile laboratories. In Butembo, an Associated Press journalist watched a medical team operating one such lab near an Ebola treatment center on Thursday..Test results that used to take 72 hours can now be obtained in six hours with the mobile labs, said Lota Kalubi, a doctor at the treatment center.The labs have also made it easier to get to locations usually difficult to reach, said Michel Ngimba with the National Institute of Biomedical Research in Butembo. “So we can go, if today we have an emergency, for example, in Katwa, we can start up the vehicle, and we can move the lab to Katwa,” said Ngimba.Insecurity and community resistance are hampering containment effortsThe World Health Organization has recently raised the alarm about the virus’ rapid spread into new health zones, stretching limited resources. The current outbreak is on track to exceed the deadliest on record, West Africa’s regional outbreak between 2014 and 2016, which killed 11,000 people, WHO has said.The number of newly confirmed cases is falling, but that could be attributed to insecurity and challenges in getting communities to cooperate in some of the hot spots, Africa CDC said on Thursday. While the spread of the disease has slowed in some areas, it has accelerated in others.Confirmed cases fell from around 850 cases and 470 deaths a week in mid-July to an average of 490 cases and 230 deaths in September.A Congolese politician was beaten to death earlier this week in one of the emerging hot spots after defending government measures to deal with the outbreak, highlighting tensions and mistrust in communities.Authorities last month launched a village-centered approach that involved working with local leaders to educate people about the virus, but those efforts face resistance from residents who dismiss Ebola as a hoax. There is also deep distrust in the country’s government for reasons including how it’s managed past Ebola outbreaks and chronic corruption. .Follow The New Indian Express channel on WhatsApp Download the TNIE app to stay with us and follow the latest",
+        "url": "https://www.newindianexpress.com/world/2026/Oct/03/an-ebola-treatment-center-was-burned-down-as-the-death-toll-in-congo-passes-4000",
+        "image": "https://cf-images.assettype.com/newindianexpress/2026-10-03/guhkvia1/Ebola-Congo.webp?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+        "video": null,
+        "publish_date": "2026-10-03 09:15:40",
+        "author": "Associated Press",
+        "authors": [
+          "Associated Press"
+        ],
+        "language": "en",
+        "source_country": "in",
+        "sentiment": -0.462
+      },
+      {
+        "id": 471543454,
+        "title": "Deaths From the Ebola Outbreak in Congo Exceed 4,000",
+        "text": "The number of confirmed deaths in Congo’s Ebola outbreak has gone past 4,000, government data showed on Friday.\n\nAccording to Doctors Without Borders (MSF), the virus was spreading like wildfire in North Kivu province.\n\nIn total, 8,300 people are confirmed to have contracted the disease, with 4,018 dying. More than 2,000 patients have recovered.\n\nAcross Africa, this epidemic is ​now second only to the 2014–2016 West African outbreak, ⁠which infected at least 28,600 people and killed more than 11,000 ​across Guinea, Liberia, and Sierra Leone.\n\nBut it continues to spread quickly across eastern Congo, including in ​neighboring North Kivu.\n\nThese workers received the Ervebo vaccine, which was effective in past Ebola outbreaks caused by a different, more common type of the virus.\n\nIn an Oct. 2 statement, Doctors Without Borders said that since the start of September, North Kivu has seen a surge in Ebola, with the province now accounting for nearly 40 percent of new confirmed cases, compared to 24 percent at the end of August.\n\nStéphanie Hoffmann, the head of the MSF’s Ebola Treatment Center in Butembo, North Kivu, said it is “impossible to contain this large-scale epidemic as long as new outbreaks continue to multiply as the virus spreads in northern North Kivu.”\n\n“We can only fear a worsening of the situation in the coming weeks,” she said.\n\nThe organization is currently operating in Ituri, North Kivu, Tshopo, and Haut-Uélé.\n\nMSF confirmed on Oct. 1 that one of its staff members working in the Ebola response in Congo had tested positive for the Bundibugyo disease and had been evacuated to the Netherlands to receive treatment.\n\nThe charity did not give further details.\n\nThe WHO said in its latest report that while the number of newly reported cases each day remains high, the situation varies across Congo.\n\nIn the Sept. 25 report, the WHO said that the continuously high case fatality ratio “highlights the seriousness of the disease and the persistent challenges in timely case detection and access to early and adequate patient care.”\n\nThe organization said that factors affecting outbreak control include ongoing conflict in the region and limited access to basic services.\n\nSpecifically, these and other problems are impeding surveillance and monitoring of the disease, as well as hampering efforts to ensure patients get crucial timely care.\n\nThe United Nations noted in May that efforts to contain the outbreak were being affected by conflict involving multiple armed groups, including the Allied Democratic Forces, CODECO militias, and the Rwanda-backed M23 armed group.\n\nThe U.N. also highlighted poor roads and damaged infrastructure, as well as a lack of trust in authorities by communities.",
+        "summary": "Doctors Without Borders described the outbreak as spreading like ‘wildfire’ in North Kivu.",
+        "url": "https://www.theepochtimes.com/world/deaths-from-the-ebola-outbreak-in-congo-exceed-4000-post-6098867",
+        "image": "https://img.theepochtimes.com/assets/uploads/2026/08/20/id6077524-GettyImages-1155783283-vs_1-300x180.jpg",
+        "video": null,
+        "publish_date": "2026-10-02 19:41:18",
+        "author": "Victoria Friedman",
+        "authors": [
+          "Victoria Friedman"
+        ],
+        "language": "en",
+        "source_country": "us",
+        "sentiment": -0.262
+      },
+      {
+        "id": 471536898,
+        "title": "Inside the study for a remedy to fight Congo's deadliest Ebola outbreak",
+        "text": "RWAMPARA, Congo -- More than 250 participants have been enrolled in a trial for a drug that could stop them from contracting Ebola in Congo, in what experts have described as a critical step to try to fight the deadliest outbreak of the disease in the Central African country.\n\nThe drug is targeted at Bundibugyo virus, which is responsible for the fast-moving outbreak and is without an approved vaccine or treatment. The trial began in July and is one of several studies launched to find some protection and another way of at least slowing the outbreak.\n\nThe Associated Press spoke this week to participants and doctors at the health center where the trial is taking place in the eastern province of Ituri, the epicenter of the outbreak. The participants include people who have been exposed to the disease in this outbreak, among them health workers and patients’ relatives.\n\nAt least 8,300 confirmed cases, including 4,000 deaths, have been recorded since this Ebola outbreak was declared in mid-May in eastern Congo. It has spread to seven provinces and continues to outpace efforts to track and slow it, authorities say.\n\nThe trial is testing Gilead's experimental antiviral pill, called obeldesivir, which is given soon after suspected contact with the virus to prevent the disease from developing. That approach is called post-exposure prophylaxis, or PEP.\n\nOne participant in the trial known as EBO-PEP told AP that she enrolled in the study in August after her husband tested positive for Ebola. She says so far no one from her family developed symptoms.\n\nShe and other trial participants requested anonymity to protect their privacy due to the sensitive nature of the Ebola outbreak and the medical protocol involved.\n\nEbola disease only spreads once symptoms begin. People exposed to infected patients have to wait to see if they get sick. Finding people at high risk of incubating the Bundibugyo virus — also known as contact tracing — has proved difficult in Congo.\n\nAnother participant said two of their family members had caught Ebola, and one of them had died. “This disease is killing. It’s better to take precautions,” he said. \n\nThe trial, coordinated by ALIMA, a medical nonprofit, aims to recruit nearly 1,000 adults or children over the age of 12 who have come into contact with a confirmed case within the last five days but have no symptoms. Half will get a placebo. \n\nParticipants are monitored in person every day for 21 days, with a final phone call after 42 days, according to Dr. Godefroid Basara, who is working on the trial. \n\nALIMA said that if trial participants begin to develop symptoms, they will immediately receive supportive treatment, which has been shown to be helpful when symptoms are caught early. \n\nIf the pill proves effective, it could help break the infection chain.\n\n“It differs from a vaccine, which may take days or weeks to provide protection. It is also different from curative treatment because it is intended for people who are not yet showing symptoms,” ALIMA research coordinator Dr. Guilavogui Jean Paul Yassa said.\n\nDr. Jacques Zawadi, an investigating physician working with ALIMA at the trial center, said most participants are happy to take part in the study, but it had been challenging encouraging some people who live far from the center to sign up.\n\nHe said the study is sometimes disrupted when participants find out their family members have died from the disease.\n\n“This is the biggest challenge we face. When a person is emotionally affected, it is not easy to reason with them and ensure they return to the study,” he said.\n\nThe trial partners also include Congo’s National Institute of Biomedical Research and the French institute ANRS Emerging Infectious Diseases.\n\nAs new vaccines are under development elsewhere, Congo started vaccinating health workers with the Ervebo vaccine which was effective during previous Ebola outbreaks caused by a different, more common virus. Authorities have said Ervebo could offer some protection against Bundibugyo, but whether the vaccine can actually prevent illness is still being studied.\n\nOn Thursday, humanitarian organization Doctors Without Borders said a staff member had tested positive for Ebola and was being evacuated to the Netherlands. In June, a humanitarian physician with ALIMA also tested positive after returning to France from one of the virus hot spots.\n\nThe World Health Organization has said the outbreak continues to outpace efforts to track and slow the spread, and is set to exceed West Africa’s regional outbreak between 2014 and 2016 — the deadliest on record — which killed 11,000 people.\n\nBrennan reported from Dakar, Senegal. Lauran Neergaard contributed from Washington, D.C. \n\nFor more on Africa and development: https://apnews.com/hub/africa-pulse\n\nThe Associated Press receives financial support for global health and development coverage in Africa from the Gates Foundation. The AP is solely responsible for all content. Find AP’s standards for working with philanthropies, a list of supporters and funded coverage areas at AP.org.",
+        "summary": "More than 250 participants have been enrolled in a trial for a drug that could stop them from contracting Ebola in Congo",
+        "url": "https://abcnews.com/International/wireStory/inside-study-remedy-fight-congos-deadliest-ebola-outbreak-136967362",
+        "image": "https://i.abcnewsfe.com/a/995e9169-6a5e-4a8a-9a07-54c7f9f1a7c2/wirestory_c26811775d539c94b0221fda7c62b254_16x9.jpg?w=1600",
+        "video": null,
+        "publish_date": "2026-10-03 06:17:00",
+        "author": "Constant Same Bagalwa Associated Press,Eve Brennan Associated Press",
+        "authors": [
+          "Constant Same Bagalwa Associated Press",
+          "Eve Brennan Associated Press"
+        ],
+        "language": "en",
+        "source_country": "us",
+        "sentiment": -0.065
+      },
+      {
+        "id": 471529040,
+        "title": "Thousands flee Congo Ebola-hit camp, stoking concerns about disease spread",
+        "text": "Security forces went to the Kigonze camp looking for weapons and clashes ensued, causing camp residents to flee over the last week, according to Congolese and health officials\n\nThe camp for ​some 19,000 displaced residents in Ituri province now lies abandoned, UN Senior ​Ebola Coordinator Julien Harneis said in a statement\n\nReuters reported in June ⁠that more than 30 people had died in the camp in just over a ​month, many from Ebola\n\nTwo health officials with knowledge of the situation said that about ​1,000 Ebola contacts were resident in the camp. Only about a fifth of those have since been traced, one of the sources added\n\n“The enormous challenge of halting the spread of Ebola in ​the Democratic Republic of the Congo (DRC) just became even harder…,” the UN said. It ​said an Ebola transit centre where suspected Ebola cases could be isolated, tested and treated was ‌also ⁠burned down\n\nThe UN refugee agency told Reuters there have been 88 confirmed Ebola cases in Congo displacement sites and 56 deaths, including those in Kigonze. The toll was likely an underestimate, it said\n\nEbola often spreads quickly in displacement camps where aid groups ​say overcrowding and ​poor sanitary conditions ⁠are common. The International Organization for Migration, which did not have data for the Kigonze site, said its fatality rate for ​Ebola cases in other camps was more than 80% — much higher ​than the ⁠average of around 50%\n\nIturi, South Kivu and North Kivu in eastern Congo have been devastated by decades of conflict and are home to more than 5 million displaced people\n\nIturi ⁠is the ​worst affected province of the current outbreak, which ​was declared in May. It is already the deadliest outbreak in Congo’s history, having killed at least 3,982 people.",
+        "summary": "By Emma Farge and Clement Bonnerot Reuters &#124; Posted by TOE Thousands of displaced residents at an Ebola-hit camp in eastern Democratic Republic of Congo have fled after soldiers entered ​the site, UN and Congolese officials said on Thursday, raising concern about ‌the disease&#8217;s spread.",
+        "url": "https://www.timesofearth.com/2026/10/02/thousands-flee-congo-ebola-hit-camp-stoking-concerns-about-disease-spread",
+        "image": "https://www.timesofearth.com/wp-content/uploads/2026/10/image-3-1.jpg",
+        "video": null,
+        "publish_date": "2026-10-02 09:36:11",
+        "author": "Times of Earth",
+        "authors": [
+          "Times of Earth"
+        ],
+        "language": "en",
+        "source_country": "us",
+        "sentiment": -0.745
+      }
+    ]
+  }
+}
