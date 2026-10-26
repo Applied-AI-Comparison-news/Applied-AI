@@ -33,6 +33,7 @@ EXCEL_COLUMNS = [
     ("Title", "title", 50),
     ("URL", "url", 40),
     ("Sentiment", "sentiment", 12),
+    ("Sentiment score", "sentiment_score", 15),
     ("Summary", "summary", 60),
     ("Angle", "angle", 50),
     ("Unique point", "unique_point", 50),
@@ -80,11 +81,9 @@ def get_articles(keyword: str, user_input: str) -> tuple[list[dict], str]:
     return nc.find_articles(keyword, user_input, MAX_RESULTS, DAYS_BACK)
 
 
-# cache ทีละข่าว แล้วอัปเดต progress bar นอกฟังก์ชัน เพราะ st.cache_data ห้ามเรียก element
-# ที่สร้างไว้นอกฟังก์ชัน (CacheReplayClosureError) ข่าวที่เคยตัดสินแล้วจะไม่เรียก Gemini ซ้ำ
 @st.cache_data(show_spinner=False, ttl=3600)
 def judge_article(topic: str, title: str, text: str) -> tuple[str, str]:
-    time.sleep(nc.JUDGE_DELAY)  # เว้นช่วงกัน rate limit เฉพาะตอนเรียก Gemini จริง
+    time.sleep(nc.JUDGE_DELAY)
     return nc.judge_relevance(topic, title, text)
 
 
@@ -98,7 +97,6 @@ text = st.text_input("Enter a news topic you are interested in", placeholder="e.
 if st.button("Analyze", type="primary") and text.strip():
     text = text.strip()
     st.session_state.pop("analysis", None)
-    # ข้อความบน bar บอกขั้นที่กำลังทำอยู่ จึงตั้งก่อนเริ่มแต่ละขั้น
     bar = st.progress(0.0, text="Extracting search keywords...")
     try:
         keyword = get_keyword(text)
@@ -136,7 +134,6 @@ if st.button("Analyze", type="primary") and text.strip():
         st.error(f"Something went wrong: {err}")
         st.stop()
 
-    # เก็บผลไว้ใน session_state เพราะการกดปุ่ม download ทำให้สคริปต์รันใหม่ ปุ่ม Analyze จะกลับเป็น False
     st.session_state["analysis"] = {"keyword": keyword, "results": results}
 
 analysis = st.session_state.get("analysis")
@@ -160,11 +157,13 @@ if analysis:
         with cols[i % 2].container(border=True):
             sentiment = r.get("sentiment", "neutral")
             bg = SENTIMENT_COLORS.get(sentiment, SENTIMENT_COLORS["neutral"])
+            score = r.get("sentiment_score")
+            badge = f"{sentiment}" if isinstance(score, (int, float)) else sentiment
             st.markdown(
                 f"<div style='display:flex; justify-content:space-between; align-items:center; gap:12px;'>"
                 f"<h3 style='margin:0; padding:0;'>{html.escape(r['source'])}</h3>"
                 f"<span style='background:{bg}; color:#000; border-radius:6px; padding:2px 10px; "
-                f"font-size:13px; font-weight:600; white-space:nowrap;'>{html.escape(sentiment)}</span>"
+                f"font-size:13px; font-weight:600; white-space:nowrap;'>{html.escape(badge)}</span>"
                 f"</div>",
                 unsafe_allow_html=True,
             )

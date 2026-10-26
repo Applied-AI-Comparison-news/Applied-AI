@@ -1,14 +1,3 @@
-"""
-news_comparator.py
-News Perspective Comparator (แปลงมาจาก demov1.ipynb)
-Flow: Keyword -> World News API -> Gemini คัดกรองความเกี่ยวข้อง -> Gemini เปรียบเทียบมุมมอง -> HTML
-
-วิธีใช้:
-  python news_comparator.py "Brydon Carse charged over nightclub incident"
-
-ผลลัพธ์: data/results/comparator/<keyword>.html
-"""
-
 import argparse
 import html
 import json
@@ -26,10 +15,20 @@ from fetch_dataset import API_URL, clean_text, source_from_url
 from relevance import POS, generate, judge_relevance
 
 OUT_DIR = Path("data/results/comparator")
-COMPARE_CHARS = 800    # ความยาวเนื้อข่าวที่ส่งให้ขั้นเปรียบเทียบมุมมอง
-JUDGE_CHARS = 3000     # ความยาวเนื้อข่าวที่ส่งให้ขั้นคัดกรอง (ตัดให้ Gemini ตอบเร็วขึ้น evaluate.py ยังใช้ข่าวเต็ม)
-JUDGE_DELAY = 2        # วินาทีระหว่างการเรียก Gemini แต่ละครั้งในขั้นคัดกรอง
-DAYS_BACK = 30         # ค้นข่าวย้อนหลังกี่วัน (free tier ย้อนได้ประมาณ 30 วัน)
+COMPARE_CHARS = 800
+JUDGE_CHARS = 3000
+JUDGE_DELAY = 2
+DAYS_BACK = 30
+SENTIMENT_THRESHOLD = 0.1
+
+def sentiment_label(score) -> str:
+    if not isinstance(score, (int, float)):
+        return "neutral"
+    if score > SENTIMENT_THRESHOLD:
+        return "positive"
+    if score < -SENTIMENT_THRESHOLD:
+        return "negative"
+    return "neutral"
 
 
 def clean_keyword(user_input: str) -> str:
@@ -70,9 +69,9 @@ def fetch_news(keyword: str, max_results: int = 10, days_back: int = DAYS_BACK) 
             "title": html.unescape(item.get("title", "")),
             "text": clean_text(item.get("text") or ""),
             "url": url,
+            "sentiment_score": item.get("sentiment"),
+            "sentiment": sentiment_label(item.get("sentiment")),
         }
-        # เก็บสำนักละ 1 ข่าว (เดิมใช้ source_country ทำให้เหลือประเทศละข่าวเดียว)
-        # เลือกข่าวที่มีคำค้นใน title มากสุด ไม่ใช่ตัวแรก เพราะ API เรียงตามวันที่ หน้าที่ไม่เกี่ยวมักมาก่อน
         score = len(query_words & set(re.findall(r"[a-z0-9]+", article["title"].lower())))
         if source not in best or score > best[source][0]:
             best[source] = (score, article)
@@ -82,7 +81,6 @@ def fetch_news(keyword: str, max_results: int = 10, days_back: int = DAYS_BACK) 
 
 
 def search_variants(keyword: str, user_input: str) -> list[str]:
-    """query ที่จะลองตามลำดับ: keyword เดิม -> ตัดคำท้ายทีละคำ (เหลืออย่างน้อย 2 คำ) -> ข้อความที่ผู้ใช้พิมพ์"""
     words = keyword.split()
     variants = [keyword]
     while len(words) > 2:
@@ -94,8 +92,6 @@ def search_variants(keyword: str, user_input: str) -> list[str]:
 
 
 def find_articles(keyword: str, user_input: str, max_results: int = 10, days_back: int = DAYS_BACK) -> tuple[list[dict], str]:
-    """ค้นข่าวด้วย keyword ถ้าไม่เจอเลยลอง query ที่หลวมขึ้นตาม search_variants คืน (ข่าว, query ที่ใช้ได้ผล)
-    World News API ต้องเจอทุกคำใน query ถ้า keyword ที่ได้มีคำที่ข่าวไม่ใช้ จะได้ 0 ข่าว"""
     for query in search_variants(keyword, user_input):
         articles = fetch_news(query, max_results, days_back)
         if articles:
@@ -105,8 +101,6 @@ def find_articles(keyword: str, user_input: str, max_results: int = 10, days_bac
 
 
 def filter_relevant(topic: str, articles: list[dict], on_progress=None) -> list[dict]:
-    """ให้ Gemini ตัดสินทีละข่าวว่าเกี่ยวข้องกับหัวข้อไหม (ใช้ judge_relevance ตัวเดียวกับที่วัดผลใน evaluate.py)
-    on_progress(i, total, article, label, reason) ถูกเรียกหลังตัดสินแต่ละข่าว (ใช้แสดง progress บนเว็บ)"""
     kept = []
     for i, a in enumerate(articles):
         if i:
@@ -132,17 +126,15 @@ COMPARE_CONFIG = types.GenerateContentConfig(
                 "article": {"type": "integer"},
                 "summary": {"type": "string"},
                 "angle": {"type": "string"},
-                "sentiment": {"type": "string", "enum": ["positive", "neutral", "negative"]},
                 "unique_point": {"type": "string"},
             },
-            "required": ["article", "summary", "angle", "sentiment", "unique_point"],
+            "required": ["article", "summary", "angle", "unique_point"],
         },
     },
 )
 
 
 def compare_perspectives(keyword: str, articles: list[dict]) -> list[dict]:
-    """ให้ Gemini เปรียบเทียบมุมมองของแต่ละสำนัก คืน list ที่มีข้อมูลบทความต้นฉบับแนบมาด้วย"""
     if not articles:
         return []
 
@@ -162,7 +154,6 @@ For each article, return an object with:
 - "article": the article number
 - "summary": 2-sentence summary in English
 - "angle": what angle or framing this source emphasizes (1 sentence)
-- "sentiment": "positive", "neutral", or "negative"
 - "unique_point": one thing this source mentions that others don't"""
 
     results = json.loads(generate(prompt, COMPARE_CONFIG))
@@ -204,7 +195,6 @@ def run_pipeline(input_text: str, max_results: int = 10, days_back: int = DAYS_B
     print("Step 1: หา keyword...")
     keyword = clean_keyword(input_text)
     print(f"keyword: {keyword}")
-    # ข้อความที่ผู้ใช้พิมพ์มาบอกหัวข้อได้ละเอียดกว่า keyword สั้นๆ จึงใช้เป็นเกณฑ์คัดกรอง
     topic = input_text
 
     print("\nStep 2: ดึงข่าว...")
@@ -229,7 +219,6 @@ def run_pipeline(input_text: str, max_results: int = 10, days_back: int = DAYS_B
 
 
 def main() -> None:
-    # fetch_news ใช้ RuntimeError แล้ว (เพื่อให้เว็บจับได้) CLI จึงแปลงกลับเป็นข้อความ + exit
     ap = argparse.ArgumentParser(description="News Perspective Comparator")
     ap.add_argument("text", help="keyword หรือข้อความอธิบายหัวข้อข่าว")
     ap.add_argument("--max", type=int, default=10, help="จำนวนข่าวสูงสุดที่ดึง (default 10)")
