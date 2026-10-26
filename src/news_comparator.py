@@ -20,6 +20,11 @@ JUDGE_CHARS = 3000
 JUDGE_DELAY = 2
 DAYS_BACK = 30
 SENTIMENT_THRESHOLD = 0.1
+WORLD_NEWS_ERRORS = {
+    401: "World News API key is invalid. Please check WORLD_NEWS_API_KEY.",
+    402: "World News API daily quota is used up. Please try again tomorrow.",
+    429: "Too many requests to World News API. Please wait a minute and try again.",
+}
 
 def sentiment_label(score) -> str:
     if not isinstance(score, (int, float)):
@@ -54,9 +59,15 @@ def fetch_news(keyword: str, max_results: int = 10, days_back: int = DAYS_BACK) 
         "number": max_results,
         "earliest-publish-date": (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d"),
     }
-    res = requests.get(API_URL, params=params, headers={"x-api-key": api_key}, timeout=30)
+    try:
+        res = requests.get(API_URL, params=params, headers={"x-api-key": api_key}, timeout=30)
+    except requests.Timeout:
+        raise RuntimeError("World News API did not respond in 30 seconds. Please try again.") from None
+    except requests.RequestException:
+        raise RuntimeError("Cannot connect to World News API. Please check your internet connection.") from None
     if res.status_code != 200:
-        raise RuntimeError(f"World News API error {res.status_code}: {res.text[:200]}")
+        raise RuntimeError(WORLD_NEWS_ERRORS.get(
+            res.status_code, f"World News API error {res.status_code}: {res.text[:200]}"))
 
     query_words = set(re.findall(r"[a-z0-9]+", keyword.lower()))
     best: dict[str, tuple[int, dict]] = {}
@@ -156,7 +167,10 @@ For each article, return an object with:
 - "angle": what angle or framing this source emphasizes (1 sentence)
 - "unique_point": one thing this source mentions that others don't"""
 
-    results = json.loads(generate(prompt, COMPARE_CONFIG))
+    try:
+        results = json.loads(generate(prompt, COMPARE_CONFIG))
+    except json.JSONDecodeError:
+        raise RuntimeError("Gemini returned the summaries in an unexpected format. Please click Analyze again.") from None
     merged = []
     for r in results:
         n = r.get("article")

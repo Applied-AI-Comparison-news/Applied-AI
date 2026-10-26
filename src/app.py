@@ -8,11 +8,14 @@ import html
 import io
 import os
 import re
+import sys
 import time
 
 import streamlit as st
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 try:
     for _k, _v in st.secrets.items():
@@ -25,6 +28,8 @@ import news_comparator as nc  # noqa: E402
 
 MAX_RESULTS = 8
 DAYS_BACK = 30
+MIN_LETTERS = 3
+MAX_INPUT_CHARS = 200
 SENTIMENT_COLORS = {"positive": "#4ade80", "negative": "#f87171", "neutral": "#facc15"}
 
 EXCEL_COLUMNS = [
@@ -71,6 +76,24 @@ def build_excel(keyword: str, results: list[dict]) -> bytes:
     return buf.getvalue()
 
 
+def validate_topic(text: str) -> str | None:
+    if not text:
+        return "Please enter a news topic."
+    if re.search(r"[^\x00-\x7F‘’“”–—]", text):
+        return "Please type the topic in English only (no Thai text, emoji or special symbols)."
+    if len(re.findall(r"[A-Za-z]", text)) < MIN_LETTERS:
+        return "The topic is too short. Please describe the news in a few English words, e.g. \"Tesla deliveries\"."
+    return None
+
+
+def gemini_error_message(err: nc.errors.APIError) -> str:
+    if err.code in (400, 401, 403):
+        return f"Gemini rejected the request (error {err.code}). Please check that GEMINI_API_KEY is correct."
+    if err.code == 429:
+        return "Gemini quota is used up. Please wait a few minutes and try again."
+    return f"Gemini is busy or temporarily down (error {err.code}). Please try again in a moment."
+
+
 @st.cache_data(show_spinner=False, ttl=3600)
 def get_keyword(text: str) -> str:
     return nc.clean_keyword(text)
@@ -92,11 +115,19 @@ def get_results(keyword: str, relevant: list[dict]) -> list[dict]:
     return nc.compare_perspectives(keyword, relevant)
 
 
-text = st.text_input("Enter a news topic you are interested in", placeholder="e.g. Brydon Carse charged over nightclub incident")
+text = st.text_input(
+    "Enter a news topic you are interested in (English)",
+    placeholder="e.g. Brydon Carse charged over nightclub incident",
+    max_chars=MAX_INPUT_CHARS,
+)
 
-if st.button("Analyze", type="primary") and text.strip():
+if st.button("Analyze", type="primary"):
     text = text.strip()
     st.session_state.pop("analysis", None)
+    problem = validate_topic(text)
+    if problem:
+        st.warning(problem)
+        st.stop()
     bar = st.progress(0.0, text="Extracting search keywords...")
     try:
         keyword = get_keyword(text)
@@ -127,11 +158,23 @@ if st.button("Analyze", type="primary") and text.strip():
         bar.empty()
     except nc.errors.APIError as err:
         bar.empty()
-        st.error(f"Gemini returned error {err.code} (the server is busy or temporarily down). Please try again in a moment.")
+        st.error(gemini_error_message(err))
         st.stop()
     except (RuntimeError, SystemExit) as err:
         bar.empty()
-        st.error(f"Something went wrong: {err}")
+        st.error(str(err))
+        st.stop()
+    except ValueError as err:
+        bar.empty()
+        st.error("Gemini returned an answer in an unexpected format. Please click Analyze again.")
+        with st.expander("Error details"):
+            st.exception(err)
+        st.stop()
+    except Exception as err:
+        bar.empty()
+        st.error("Something unexpected went wrong. Please try again.")
+        with st.expander("Error details"):
+            st.exception(err)
         st.stop()
 
     st.session_state["analysis"] = {"keyword": keyword, "results": results}
