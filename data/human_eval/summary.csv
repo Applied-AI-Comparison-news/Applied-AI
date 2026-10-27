@@ -1,0 +1,5 @@
+﻿criterion,n,mean,sd,pct_4_or_5,dist_1_to_5
+completeness,80,3.74,0.82,0.7,2/3/19/46/10
+accuracy,80,3.66,0.79,0.69,2/4/19/49/6
+readability,80,4.3,0.7,0.93,1/0/5/42/32
+agreement,120,0.54,,0.94,exact / within 1

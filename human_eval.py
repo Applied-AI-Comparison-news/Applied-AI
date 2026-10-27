@@ -142,13 +142,13 @@ def mean_sd(values: list[int]) -> tuple[float, float]:
 
 
 def summarize() -> None:
-    sheets = sorted(OUT_DIR.glob("rater_*.csv"))
+    sheets = sorted(OUT_DIR.glob("*rater_*.csv"))
     if not sheets:
         raise SystemExit(f"ไม่พบไฟล์ rater_*.csv ใน {OUT_DIR} รัน --build ก่อน")
 
     scores: list[dict] = []
     for path in sheets:
-        rater = path.stem.removeprefix("rater_")
+        rater = path.stem.split("rater_")[-1]
         for r in read_table(path):
             for c in CRITERIA:
                 value = r.get(c, "").strip()
