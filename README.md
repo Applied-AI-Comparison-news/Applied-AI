@@ -5,8 +5,8 @@
 ผู้ใช้พิมพ์หัวข้อข่าวภาษาอังกฤษ ระบบจะค้นข่าวจากหลายสำนัก คัดข่าวที่ไม่เกี่ยวข้องออกด้วย Gemini
 แล้วแสดงบทสรุป มุมมองการนำเสนอ ประเด็นเฉพาะ และ Tone ของแต่ละสำนักเรียงกัน ให้ผู้ใช้เปรียบเทียบได้เอง
 
-- **Deployed app:** _(ใส่ URL ของ Streamlit Community Cloud)_
-- **Repository:** https://github.com/RealTiraqmisu/Applied-AI
+- **Deployed app:** https://news-perspective-comparator.streamlit.app/
+- **Repository:** https://github.com/Applied-AI-Comparison-news/Applied-AI
 
 ## ฟังก์ชันหลัก
 
