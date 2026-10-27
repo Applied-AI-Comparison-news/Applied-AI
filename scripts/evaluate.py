@@ -5,20 +5,20 @@ evaluate.py
 ขั้นตอน:
 1. อ่านไฟล์ label + เนื้อข่าวเต็มจาก data/raw/Txx.json (จับคู่ด้วย api_news_id)
 2. ให้ Gemini ตัดสินทีละข่าวด้วย topic_description + title + ข่าวเต็ม
-   ผลบันทึกที่ data/results/gemini_pred_<MODEL>.csv ทุกข่าว ถ้ารันใหม่ด้วยโมเดลเดิมจะข้ามข่าวที่มีผลแล้ว (ไม่เสีย token ซ้ำ)
+   ผลบันทึกที่ results/filtering/gemini_pred_<MODEL>.csv ทุกข่าว ถ้ารันใหม่ด้วยโมเดลเดิมจะข้ามข่าวที่มีผลแล้ว (ไม่เสีย token ซ้ำ)
    เปลี่ยน MODEL ใน secrets.toml = ได้ไฟล์ผลชุดใหม่แยกกัน ใช้เทียบหลายโมเดลได้
-3. รวมกับ data/results/baseline_pred.csv (จาก baseline.py) แล้วคิด Precision / Recall / F1
+3. รวมกับ results/filtering/baseline_pred.csv (จาก baseline.py) แล้วคิด Precision / Recall / F1
    รวมทั้งหมด แยกตามหัวข้อ และแยกตาม difficulty
 
 วิธีใช้ (รันจากโฟลเดอร์ project):
-  python baseline.py --labels data/ground_truth.csv
-  python evaluate.py --labels data/ground_truth.csv
-  python evaluate.py --labels data/ground_truth.csv --topics T16-T20 --no-gemini   # คิดคะแนนอย่างเดียว ไม่เรียก API
+  python scripts/baseline.py --labels data/ground_truth.csv
+  python scripts/evaluate.py --labels data/ground_truth.csv
+  python scripts/evaluate.py --labels data/ground_truth.csv --topics T16-T20 --no-gemini   # คิดคะแนนอย่างเดียว ไม่เรียก API
 
 ผลลัพธ์:
-  data/results/gemini_pred_<MODEL>.csv   คำตอบของ Gemini รายข่าว
-  data/results/comparison_<MODEL>.csv    เฉลย / baseline / gemini รายข่าว (ไว้ดูข่าวที่ตอบผิด)
-  data/results/metrics_<MODEL>.csv       คะแนนทุกกลุ่ม
+  results/filtering/gemini_pred_<MODEL>.csv   คำตอบของ Gemini รายข่าว
+  results/filtering/comparison_<MODEL>.csv    เฉลย / baseline / gemini รายข่าว (ไว้ดูข่าวที่ตอบผิด)
+  results/filtering/metrics_<MODEL>.csv       คะแนนทุกกลุ่ม
 """
 
 import argparse
@@ -30,14 +30,14 @@ import time
 from pathlib import Path
 
 # fetch_dataset.py และ relevance.py ย้ายไปอยู่ใน src/ (ตัวหลักของเว็บ)
-sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from fetch_dataset import clean_text
 from baseline import outcome, parse_topic_ids, read_table
 from relevance import MODEL, NEG, POS, judge_relevance
 
 RAW_DIR = Path("data/raw")
-OUT_DIR = Path("data/results")
+OUT_DIR = Path("results/filtering")
 _MODEL_TAG = re.sub(r"[^A-Za-z0-9._-]+", "_", MODEL)
 GEMINI_CSV = OUT_DIR / f"gemini_pred_{_MODEL_TAG}.csv"
 BASELINE_CSV = OUT_DIR / "baseline_pred.csv"

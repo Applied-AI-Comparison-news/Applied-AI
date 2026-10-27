@@ -7,19 +7,19 @@ completeness = ความครบถ้วน, accuracy = ความถู�
 1. --build  เลือกข่าว relevant จาก ground truth หัวข้อละ 2 ข่าว (เติมให้ครบ 40 จากหัวข้อที่มีข่าวเยอะ)
             ให้ Gemini สรุปทีละหัวข้อด้วย compare_perspectives ตัวเดียวกับเว็บ แล้วแบ่งเป็น 2 ชุด ชุดละ 20 ข่าว
             ผู้ประเมิน 2 คนแรกได้ชุด A อีก 2 คนได้ชุด B (แต่ละข่าวมีคนให้คะแนน 2 คน)
-2. ผู้ประเมินกรอกคะแนนในไฟล์ rater_<ชื่อ>.csv ของตัวเอง โดยเปิดข่าวต้นฉบับจาก url อ่านคู่กัน
+2. ผู้ประเมินกรอกคะแนนในไฟล์ rating_<ชื่อ>.csv ของตัวเอง โดยเปิดข่าวต้นฉบับจาก url อ่านคู่กัน
    ความหมายของคะแนน 1-5 แต่ละด้านดูที่ data/human_eval/rubric.csv
 3. --summarize  สรุปคะแนนเฉลี่ย ส่วนเบี่ยงเบน และความเห็นตรงกันระหว่างผู้ประเมิน 2 คน
 
 วิธีใช้ (รันจากโฟลเดอร์ project):
-  python human_eval.py --build --raters Man,Pete,Noeysod,Care
-  python human_eval.py --summarize
+  python scripts/human_eval.py --build --raters Man,Pete,Noeysod,Care
+  python scripts/human_eval.py --summarize
 
-ผลลัพธ์ (data/human_eval/):
-  outputs.csv          ผลจาก Gemini ทุกข่าว (รัน --build ซ้ำจะใช้ไฟล์นี้ ไม่เรียก Gemini ใหม่)
-  rater_<ชื่อ>.csv     ชีตให้คะแนนของแต่ละคน
-  rubric.csv           เกณฑ์ให้คะแนน 1-5 ของแต่ละด้าน (เขียนเอง ไม่ได้สร้างจากสคริปต์)
-  summary.csv          คะแนนสรุปรายด้าน
+ไฟล์:
+  data/human_eval/rubric.csv               เกณฑ์ให้คะแนน 1-5 ของแต่ละด้าน (เขียนเอง ไม่ได้สร้างจากสคริปต์)
+  data/human_eval/ratings/rating_<ชื่อ>.csv  ชีตให้คะแนนของแต่ละคน
+  results/human_eval/outputs.csv           ผลจาก Gemini ทุกข่าว (รัน --build ซ้ำจะใช้ไฟล์นี้ ไม่เรียก Gemini ใหม่)
+  results/human_eval/summary.csv           คะแนนสรุปรายด้าน
 """
 
 import argparse
@@ -31,7 +31,7 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from baseline import read_table
 from fetch_dataset import clean_text
@@ -40,7 +40,8 @@ from news_comparator import compare_perspectives
 GROUND_TRUTH = Path("data/ground_truth.csv")
 TOPICS_CSV = Path("data/topics.csv")
 RAW_DIR = Path("data/raw")
-OUT_DIR = Path("data/human_eval")
+RATINGS_DIR = Path("data/human_eval/ratings")
+OUT_DIR = Path("results/human_eval")
 OUTPUTS_CSV = OUT_DIR / "outputs.csv"
 SUMMARY_CSV = OUT_DIR / "summary.csv"
 
@@ -133,8 +134,8 @@ def build(raters: list[str]) -> None:
 
     for rater, group in zip(raters, "AABB"):
         sheet = [r for r in rows if r["group"] == group]
-        write_csv(OUT_DIR / f"rater_{rater}.csv", sheet, SHEET_FIELDS)
-        print(f"สร้าง rater_{rater}.csv (กลุ่ม {group}, {len(sheet)} ข่าว)")
+        write_csv(RATINGS_DIR / f"rating_{rater}.csv", sheet, SHEET_FIELDS)
+        print(f"สร้าง rating_{rater}.csv (กลุ่ม {group}, {len(sheet)} ข่าว)")
 
 
 def mean_sd(values: list[int]) -> tuple[float, float]:
@@ -142,13 +143,13 @@ def mean_sd(values: list[int]) -> tuple[float, float]:
 
 
 def summarize() -> None:
-    sheets = sorted(OUT_DIR.glob("*rater_*.csv"))
+    sheets = sorted(RATINGS_DIR.glob("rating_*.csv"))
     if not sheets:
-        raise SystemExit(f"ไม่พบไฟล์ rater_*.csv ใน {OUT_DIR} รัน --build ก่อน")
+        raise SystemExit(f"ไม่พบไฟล์ rating_*.csv ใน {RATINGS_DIR} รัน --build ก่อน")
 
     scores: list[dict] = []
     for path in sheets:
-        rater = path.stem.split("rater_")[-1]
+        rater = path.stem.removeprefix("rating_")
         for r in read_table(path):
             for c in CRITERIA:
                 value = r.get(c, "").strip()

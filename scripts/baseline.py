@@ -4,7 +4,7 @@
 2. ถ้า query มี keyword ทุกคำ แต่ไม่มีคำไหนอยู่ใน title => not relevant\
 3. ถ้า query มี keyword ไม่ครบทุกคำ => not relevant
 วิธีใช้:
-    python baseline.py --labels labeling.tsv --topics T01-T05 # ตามหัวข้อที่ได้รับ
+    python scripts/baseline.py --labels data/ground_truth.csv --topics T01-T05  # ไม่ใส่ --topics = ทุกหัวข้อ
 
     เนื้อหาเต็มอ่านจาก data/raw/Txx.json
 """
@@ -16,7 +16,7 @@ import re
 from pathlib import Path
 
 RAW_DIR = Path("data/raw")
-OUT_DIR = Path("data/results")
+OUT_DIR = Path("results/filtering")
 POS, NEG = "relevant", "not relevant"
 
 STOPWORDS = {"a", "an", "the", "of", "in", "on", "for", "to", "and", "or", "is", "at", "by", "with"}
