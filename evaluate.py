@@ -11,9 +11,9 @@ evaluate.py
    รวมทั้งหมด แยกตามหัวข้อ และแยกตาม difficulty
 
 วิธีใช้ (รันจากโฟลเดอร์ project):
-  python baseline.py --labels data/label_sheet.csv --topics T16-T20
-  python evaluate.py --labels data/label_sheet.csv --topics T16-T20
-  python evaluate.py --labels data/label_sheet.csv --topics T16-T20 --no-gemini   # คิดคะแนนอย่างเดียว ไม่เรียก API
+  python baseline.py --labels data/ground_truth.csv
+  python evaluate.py --labels data/ground_truth.csv
+  python evaluate.py --labels data/ground_truth.csv --topics T16-T20 --no-gemini   # คิดคะแนนอย่างเดียว ไม่เรียก API
 
 ผลลัพธ์:
   data/results/gemini_pred_<MODEL>.csv   คำตอบของ Gemini รายข่าว
